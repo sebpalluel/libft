@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_freetab.c                                       :+:      :+:    :+:   */
+/*   ft_ishexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/16 18:44:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/03/21 18:15:35 by psebasti         ###   ########.fr       */
+/*   Created: 2017/03/31 15:28:48 by psebasti          #+#    #+#             */
+/*   Updated: 2017/03/31 15:30:31 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_freetab(void **tab)
+int			ft_ishexa(char c)
 {
-	int	i;
-
-	i = 0;
-	if (tab == NULL)
-		return ;
-	while (tab[i])
-	{
-		free(tab[i]);
-		i++;
-	}
-	if (tab)
-	free(tab);
+	if (c == '+' || c == '-' || ft_isdigit(c) == 1 || (c <= 'f' && c >= 'a') ||
+			(c <= 'F' && c >= 'A'))
+		return (1);
+	else
+		return (0);
 }

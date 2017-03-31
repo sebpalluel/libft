@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/03/08 17:37:52 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/03/31 15:31:03 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,13 @@ int		ft_isprint(int c);
 int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+int		ft_ishexa(int c);
 
 int		ft_getnbr(char *str);
 
 int		ft_atoi(const char *str);
 char	*ft_itoa(int n);
+char	*ft_ftoa(float f);
 int		ft_sqrt(int nb);
 
 size_t	ft_tablen(char **tab);
