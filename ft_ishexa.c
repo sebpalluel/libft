@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/31 15:28:48 by psebasti          #+#    #+#             */
-/*   Updated: 2017/03/31 15:30:31 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/03/31 15:55:47 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_ishexa(char c)
+int			ft_ishexa(int c)
 {
 	if (c == '+' || c == '-' || ft_isdigit(c) == 1 || (c <= 'f' && c >= 'a') ||
 			(c <= 'F' && c >= 'A'))
