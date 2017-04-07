@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/23 14:46:00 by psebasti          #+#    #+#             */
-/*   Updated: 2017/02/28 19:55:04 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/02/28 20:29:01 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ static int			copy_buff(t_fd *fd, char *src, t_char *buffer)
 
 static int			read_buff(int fd, t_fd *fd_tab)
 {
-	t_char			*buffer;
-	char			*src;
+	t_char			*buffer = NULL;
+	char			*src = NULL;
 	int				ret;
 
 	buffer = fd_tab[fd].buffer;
@@ -58,9 +58,9 @@ static int			read_buff(int fd, t_fd *fd_tab)
 
 static void			copy_line(size_t length, t_fd *fd, char **target)
 {
-	char 			*line;
-	t_char			*current;
-	t_char			*prev;
+	char 			*line = NULL;
+	t_char			*current = NULL;
+	t_char			*prev = NULL;
 
 	line = ft_strnew(length);
 	length = 0;
@@ -82,7 +82,7 @@ static void			copy_line(size_t length, t_fd *fd, char **target)
 static int			buffer_has_line(t_fd *fd, char **target)
 {
 	size_t			length;
-	t_char			*current;
+	t_char			*current = NULL;
 
 	current = fd->buffer;
 	if (current == NULL)

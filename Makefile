@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/02/28 20:13:48 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/03/03 00:52:47 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -34,7 +34,7 @@ SRC		=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c	\
 			get_next_line.c
 OBJ		=	$(SRC:.c=.o)
 CMP		=	gcc
-FLAGS	=	-Wall -Wextra -Werror
+FLAGS	=	-ggdb -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -55,3 +55,4 @@ testgnl:
 	$(CMP) $(FLAGS) -o get_next_line main.c -L ../libft/ -lft
 
 re: fclean all
+
