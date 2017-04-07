@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/03/03 00:52:47 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/04/07 15:47:36 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -23,11 +23,11 @@ SRC		=	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c	\
 			ft_strdel.c ft_strclr.c	ft_strdup.c	 ft_strtabcpy.c				\
 			ft_intmin.c ft_intmax.c	ft_inttabcpy.c							\
 			ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c				\
-			ft_isdigit.c ft_isalnum.c ft_isalpha.c ft_isspace.c				\
+			ft_isdigit.c ft_isalnum.c ft_isalpha.c ft_isspace.c	 ft_ishexa.c\
 			ft_getnbr.c														\
 			ft_putchar.c ft_putchar_fd.c ft_putstr.c ft_putstr_fd.c			\
 			ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c			\
-			ft_atoi.c ft_itoa.c ft_sqrt.c									\
+			ft_atoi.c ft_itoa.c ft_sqrt.c ft_ftoa.c							\
 			ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c				\
 			ft_lsttoarray.c													\
 			ft_lstiter.c ft_lstmap.c ft_lstlen.c ft_lstaddend.c ft_lstfree.c\
