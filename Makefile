@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/04/07 18:02:30 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/04/07 18:10:35 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -126,21 +126,21 @@ INCS = $(addprefix -I, $(INCS_DIRS))
 all: $(NAME)
 
 $(NAME): build $(LIBS) $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	@ar rc $(NAME) $(OBJS)
+	@ranlib $(NAME)
 
 build:
-	mkdir -p $(OBJDIR)
-	mkdir -p $(OBJS_DIRS)
+	@mkdir -p $(OBJDIR)
+	@mkdir -p $(OBJS_DIRS)
 
 clean:
-	rm -f $(LIBS)
-	rm -rf $(OBJDIR)
+	@rm -f $(LIBS)
+	@rm -rf $(OBJDIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-	$(CC) -c -o $@ $< $(INCS) $(CFLAGS)
+	@$(CC) -c -o $@ $< $(INCS) $(CFLAGS)
