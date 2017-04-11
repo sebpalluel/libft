@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/04/07 18:10:35 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/04/11 17:42:47 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -26,6 +26,8 @@ MATHPATH = math/
 PERSOPATH = perso/
 INTPATH = int/
 TABPATH = tab/
+PRINTPATH = print/
+GFXPATH = gfx/
 
 SRC		=	$(MEMPATH)ft_memset.c\
 			$(MEMPATH)ft_bzero.c\
@@ -37,11 +39,14 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(MEMPATH)ft_memalloc.c\
 			$(MEMPATH)ft_memdel.c\
 			$(MEMPATH)ft_memdup.c\
-			$(TABPATH)ft_freetab.c\
-			$(TABPATH)ft_newtab.c\
+			$(TABPATH)ft_tabfree.c\
+			$(TABPATH)ft_h_flip.c\
+			$(TABPATH)ft_v_flip.c\
+			$(TABPATH)ft_tabnew.c\
+			$(TABPATH)ft_tabdepth.c\
 			$(TABPATH)ft_tablen.c\
-			$(TABPATH)ft_strtabcpy.c\
-			$(TABPATH)ft_inttabcpy.c\
+			$(TABPATH)ft_tabstrcpy.c\
+			$(TABPATH)ft_tabintcpy.c\
 			$(STRPATH)ft_strlen.c\
 			$(STRPATH)ft_strdup.c\
 			$(STRPATH)ft_strcpy.c\
@@ -73,6 +78,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(STRPATH)ft_toupper.c\
 			$(INTPATH)ft_intmin.c\
 			$(INTPATH)ft_intmax.c\
+			$(INTPATH)ft_intdup.c\
 			$(INTPATH)ft_getnbr.c\
 			$(CTYPEPATH)ft_isprint.c\
 			$(CTYPEPATH)ft_isascii.c\
@@ -81,6 +87,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(CTYPEPATH)ft_isalpha.c\
 			$(CTYPEPATH)ft_isspace.c\
 			$(CTYPEPATH)ft_ishexa.c\
+			$(CTYPEPATH)ft_checkhexa.c\
+			$(CTYPEPATH)ft_checkdigit.c\
 			$(PUTPATH)ft_putchar.c\
 			$(PUTPATH)ft_putchar_fd.c\
 			$(PUTPATH)ft_putstr.c\
@@ -106,7 +114,34 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(LISTPATH)ft_lstlen.c\
 			$(LISTPATH)ft_lstaddend.c\
 			$(LISTPATH)ft_lstfree.c\
-			$(PERSOPATH)get_next_line.c
+			$(PERSOPATH)get_next_line.c\
+			$(PERSOPATH)ft_swap.c\
+			$(PRINTPATH)ft_printfloatmatrix.c\
+			$(PRINTPATH)ft_printintarray.c\
+			$(PRINTPATH)ft_printstrarray.c\
+			$(GFXPATH)ft_colorcpy.c\
+			$(GFXPATH)ft_colornew.c\
+			$(GFXPATH)ft_colorparse.c\
+			$(GFXPATH)ft_hextocolor.c\
+			$(GFXPATH)ft_hexcolor.c\
+			$(GFXPATH)ft_imgclean.c\
+			$(GFXPATH)ft_imgdel.c\
+			$(GFXPATH)ft_imgnew.c\
+			$(GFXPATH)ft_initwindow.c\
+			$(GFXPATH)ft_matrixadd.c\
+			$(GFXPATH)ft_matrixhomothety.c\
+			$(GFXPATH)ft_matrixmult.c\
+			$(GFXPATH)ft_matrixonpoint.c\
+			$(GFXPATH)ft_matrixrotx.c\
+			$(GFXPATH)ft_matrixroty.c\
+			$(GFXPATH)ft_matrixrotz.c\
+			$(GFXPATH)ft_matrixtranslate.c\
+			$(GFXPATH)ft_matrixzero.c\
+			$(GFXPATH)ft_pixcpy.c\
+			$(GFXPATH)ft_pixnew.c\
+			$(GFXPATH)ft_pixpopulate.c\
+			$(GFXPATH)ft_vec3new.c\
+			$(GFXPATH)ft_vec3populate.c\
 
 OBJS 	=	$(SRCS:.c=.o)
 
@@ -114,6 +149,7 @@ OBJS 	=	$(SRCS:.c=.o)
 
 CMP		=	gcc
 FLAGS	=	-ggdb -Wall -Wextra -Werror
+MLX		=	-L minilibx/ -lmlx -framework OpenGL -framework AppKit
 
 SRC := $(filter $(addprefix %, .c), $(SRC))
 SRCS = $(addprefix $(SRCDIR), $(SRC))
@@ -143,4 +179,4 @@ fclean: clean
 re: fclean all
 
 $(OBJDIR)%.o: $(SRCDIR)%.c
-	@$(CC) -c -o $@ $< $(INCS) $(CFLAGS)
+	@$(CC) -c -o $@ $< $(INCS) $(FLAGS)
