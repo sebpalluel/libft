@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 17:46:18 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/04/14 13:59:33 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <strings.h>
 # include <math.h>
+# include <pthread.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
