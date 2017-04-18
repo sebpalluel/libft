@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 19:31:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 13:36:52 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/04/18 19:48:13 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ typedef struct		s_mlx
 typedef struct		s_img
 {
 	void			*image;
-	char			*image_addr;
+	void			*image_addr;
 	int				bbp;
 	int				endian;
 	int				size_x;
