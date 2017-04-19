@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_initwindow.c                                    :+:      :+:    :+:   */
+/*   ft_mlxdelete.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/11 15:16:33 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/14 18:25:29 by psebasti         ###   ########.fr       */
+/*   Created: 2017/04/18 21:08:06 by psebasti          #+#    #+#             */
+/*   Updated: 2017/04/18 21:57:45 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_mlx		*ft_initwindow(char *name, size_t width, size_t height)
+void		ft_mlxdelete(t_mlx *mlx)
 {
-	t_mlx	*mlx;
-
-	if (!(mlx = (t_mlx*)malloc(sizeof(t_mlx))))
-		return (NULL);
-	mlx->mlx_ptr = mlx_init();
-	mlx->win_ptr = mlx_new_window(mlx->mlx_ptr, width, height, name);
-	return (mlx);
+	if (mlx)
+	{
+		if (mlx->mlx_ptr && mlx->win_ptr)
+		{
+			mlx_destroy_window(mlx->mlx_ptr, mlx->win_ptr);
+			free(mlx->mlx_ptr);
+		}
+		free(mlx);
+	}
 }

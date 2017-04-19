@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/14 13:59:33 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/04/18 21:45:07 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 # include <strings.h>
 # include <math.h>
 # include <pthread.h>
-# include <stdlib.h>
 # include <unistd.h>
+# include <stdlib.h>
 # include <limits.h>
 # include "../minilibx/mlx.h"
 # include "libft_struct.h"
@@ -38,6 +38,7 @@ t_color			*ft_colornew(unsigned char r, unsigned char g, \
 t_color			*ft_colorparse(char *arg);
 t_color			*ft_hexcolor(int hexValue);
 void			ft_hextocolor(t_color *col, int hexValue);
+void			ft_mlxdelete(t_mlx *mlx);
 void			ft_imgclean(t_img *img, size_t width, size_t height);
 void			ft_imgdel(t_img *img, void *mlx);
 t_img			*ft_imgnew(void *mlx, size_t x, size_t y);
