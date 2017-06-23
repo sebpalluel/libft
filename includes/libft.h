@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/18 21:45:07 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/05/11 17:09:01 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int				get_next_line(const int fd, char **line);
 void 			ft_swap(void *a, void *b, size_t nbytes);
 
 void			ft_colorcpy(t_color *clr_from, t_color *clr_to);
+void			ft_color(t_color *clr, \
+				unsigned char r, unsigned char g, unsigned char b);
 t_color			*ft_colornew(unsigned char r, unsigned char g, \
 				unsigned char b);
 t_color			*ft_colorparse(char *arg);
