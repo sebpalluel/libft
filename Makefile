@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/05/11 17:09:31 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/07/13 22:13:19 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -142,6 +142,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(GFXPATH)ft_pixcpy.c\
 			$(GFXPATH)ft_pixnew.c\
 			$(GFXPATH)ft_pixpopulate.c\
+			$(GFXPATH)ft_vec3cpy.c\
 			$(GFXPATH)ft_vec3new.c\
 			$(GFXPATH)ft_vec3populate.c\
 

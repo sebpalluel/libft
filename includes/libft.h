@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/05/11 17:09:01 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/07/13 22:13:21 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ double			**ft_matrixzero(int size);
 void			ft_pixcpy(t_pix *pix_from, t_pix *pix_to);
 t_pix			*ft_pixnew(int x, int y, int z);
 void			ft_pixpopulate(t_pix *to_pix, int x, int y, int z);
+void			ft_vec3cpy(t_vec3 *vec_from, t_vec3 *vec_to);
 t_vec3			*ft_vec3new(double x, double y, double z);
 void			ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z);
 
