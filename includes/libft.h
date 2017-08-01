@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/07/13 22:13:21 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/01 18:50:10 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,7 @@
 # include <limits.h>
 # include "../minilibx/mlx.h"
 # include "libft_struct.h"
-
-# define MAX_INT 2147483647
-# define MIN_INT -2147483648
-# define BUFF_SIZE 	50
-# define FD_MAX		256
-# define READ_OK	1
-# define READ_EOF	0
-# define READ_ERR	-1
+# include "libft_define.h"
 
 int				get_next_line(const int fd, char **line);
 void 			ft_swap(void *a, void *b, size_t nbytes);
