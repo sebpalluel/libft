@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/02 17:44:24 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/02 17:47:25 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@
 # define FIVE		23
 # define SIX		22
 # define SEVEN		26
-# define HEIGHT		28
+# define EIGHT		28
 # define NINE		25
 
 # define MOUSE_LEFT 1
