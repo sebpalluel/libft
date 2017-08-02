@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 19:30:59 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/02 15:54:40 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/02 16:17:40 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ char		*ft_ftoa(float f)
 	int_tmp = ft_strjoin(float_tmp, ".");
 	free(float_tmp);
 	float_tmp = ft_itoa((int)float_num);
-	result = ft_strjoin(int_tmp, float_tmp);
+	if (*float_tmp == '-')
+		result = ft_strjoin(int_tmp, float_tmp + 1);
+	else
+		result = ft_strjoin(int_tmp, float_tmp);
 	free(float_tmp);
 	free(int_tmp);
 	return (result);
