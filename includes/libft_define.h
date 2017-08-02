@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/02 17:29:57 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/02 17:44:24 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,16 +47,16 @@
 # define E_KEY		14
 # define R_KEY		15
 # define L_KEY		37
-# define 0_KEY		29
-# define 1_KEY		18
-# define 2_KEY		19
-# define 3_KEY		20
-# define 4_KEY		21
-# define 5_KEY		23
-# define 6_KEY		22
-# define 7_KEY		26
-# define 8_KEY		28
-# define 9_KEY		25
+# define ZERO		29
+# define ONE		18
+# define TWO		19
+# define THREE		20
+# define FOUR		21
+# define FIVE		23
+# define SIX		22
+# define SEVEN		26
+# define HEIGHT		28
+# define NINE		25
 
 # define MOUSE_LEFT 1
 # define MOUSE_RIGHT 2
