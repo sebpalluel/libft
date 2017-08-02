@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/27 19:30:59 by psebasti          #+#    #+#             */
-/*   Updated: 2017/03/27 19:37:37 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/02 15:54:40 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,22 @@
 
 char		*ft_ftoa(float f)
 {
-	int		before;
-	float	after;
-	int		tmp_int;
-	char	*tmp_str;
-	char	*result;
+	int			int_num;
+	float		float_num;
+	char		*int_tmp;
+	char		*float_tmp;
+	char		*result;
 
-	before = f;
-	after = f - before;
-	tmp_int = after;
-	while (after - tmp_int != 0)
-	{
-		after = after / 10;
-		tmp_int = after;
-	}
-	result = ft_itoa(before);
-	tmp_str = ft_strjoin(result, ".\0");
-	free(result);
-	result = ft_strjoin(tmp_str, ft_itoa(tmp_int));
+	int_num = (int)f;
+	float_num = f - (float)int_num;
+	while (float_num != (int)float_num)
+		float_num *= 10;
+	float_tmp = ft_itoa(int_num);
+	int_tmp = ft_strjoin(float_tmp, ".");
+	free(float_tmp);
+	float_tmp = ft_itoa((int)float_num);
+	result = ft_strjoin(int_tmp, float_tmp);
+	free(float_tmp);
+	free(int_tmp);
 	return (result);
 }
