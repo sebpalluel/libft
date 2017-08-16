@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlxdelete.c                                     :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/18 21:08:06 by psebasti          #+#    #+#             */
-/*   Updated: 2017/07/17 16:47:41 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/16 18:53:11 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/16 18:54:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_mlxdelete(t_mlx *mlx)
+int		ft_intlen(int nbr)
 {
-	if (mlx)
+	int	ret;
+
+	ret = (nbr == 0) ? 1 : 0;
+	while (nbr != 0)
 	{
-		if (mlx->mlx_ptr && mlx->win_ptr)
-		{
-			mlx_destroy_window(mlx->mlx_ptr, mlx->win_ptr);
-			free(mlx->mlx_ptr);
-		}
-		free(mlx);
+		nbr /= 10;
+		ret++;
 	}
+	return (ret);
 }

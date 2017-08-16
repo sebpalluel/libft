@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlxdelete.c                                     :+:      :+:    :+:   */
+/*   ft_randint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/18 21:08:06 by psebasti          #+#    #+#             */
-/*   Updated: 2017/07/17 16:47:41 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/16 18:51:11 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/16 18:55:02 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_mlxdelete(t_mlx *mlx)
+uint32_t		ft_randint(int length)
 {
-	if (mlx)
+	uint32_t	rand;
+	uint32_t	ret;
+
+	ret = 0;
+	while (ft_intlen(ret) < length || ret == 0)
 	{
-		if (mlx->mlx_ptr && mlx->win_ptr)
-		{
-			mlx_destroy_window(mlx->mlx_ptr, mlx->win_ptr);
-			free(mlx->mlx_ptr);
-		}
-		free(mlx);
+		rand = ft_rand();
+		rand = ft_hash32(rand);
+		ret *= 10;
+		ret += rand % 10;
 	}
+	return (ret);
 }

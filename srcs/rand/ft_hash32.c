@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mlxdelete.c                                     :+:      :+:    :+:   */
+/*   ft_hash32.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/18 21:08:06 by psebasti          #+#    #+#             */
-/*   Updated: 2017/07/17 16:47:41 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/16 18:16:56 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/16 18:50:48 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_mlxdelete(t_mlx *mlx)
+uint32_t	ft_hash32( uint32_t val)
 {
-	if (mlx)
-	{
-		if (mlx->mlx_ptr && mlx->win_ptr)
-		{
-			mlx_destroy_window(mlx->mlx_ptr, mlx->win_ptr);
-			free(mlx->mlx_ptr);
-		}
-		free(mlx);
-	}
+   val = (val + 0x7ed55d16) + (val << 12);
+   val = (val ^ 0xc761c23c) ^ (val >> 19);
+   val = (val + 0x165667b1) + (val << 5);
+   val = (val + 0xd3a2646c) ^ (val << 9);
+   val = (val + 0xfd7046c5) + (val << 3);
+   val = (val ^ 0xb55a4f09) ^ (val >> 16);
+   return (val);
 }

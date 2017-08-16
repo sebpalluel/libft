@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/01 18:50:10 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/16 18:54:54 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ long int		ft_strtol(const char *str, int base);
 
 int				ft_intmin(int *array, size_t size);
 int				ft_intmax(int *array, size_t size);
+int				ft_intlen(int nbr);
 int				*ft_intdup(int *array, size_t width);
 int				ft_getnbr(char *str);
 
@@ -152,4 +153,12 @@ void			**ft_lsttoarray(t_list *lst);
 void			ft_printfloatmatrix(float **mat, size_t size);
 void			ft_printintarray(int **map, size_t  width, size_t height);
 void			ft_printstrarray(char **array);
+
+unsigned int	ft_ror(const unsigned int value, int shift);
+unsigned int	ft_rol(const unsigned int value, int shift);
+uint32_t		ft_hash32( uint32_t val);
+unsigned long	ft_hash(unsigned char *str);
+uint32_t		ft_rand(void);
+uint32_t		ft_randint(int length);
+
 #endif
