@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/15 11:50:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/18 16:38:34 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@
 # define WHEEL_UP					4
 # define WHEEL_DOWN					5
 
-# define MOTION_KEYPRESS			2
-# define MOTION_KEYRELEASE			3
-# define MOTION_BUTTONPRESS			4
-# define MOTION_BUTTONRELEASE		5
-# define MOTION_NOTIFY				6
-# define MOTION_EXPOSE				12
+# define KEYPRESS					2
+# define KEYRELEASE					3
+# define BUTTONPRESS				4
+# define BUTTONRELEASE				5
+# define NOTIFY						6
+# define EXPOSE						12
 
 # define NOEVENTMASK				0L
 # define KEYPRESSMASK				(1L<<0)
