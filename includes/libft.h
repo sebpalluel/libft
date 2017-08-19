@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 21:53:11 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 22:11:37 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ void			ft_printstrarray(char **array);
 
 unsigned int	ft_ror(const unsigned int value, int shift);
 unsigned int	ft_rol(const unsigned int value, int shift);
-uintmax_t		ft_hash32(uintmax_t val);
+uint32_t		ft_hash32(uint32_t val);
 unsigned long	ft_hash(unsigned char *str);
 uintmax_t		ft_rand(void);
 uintmax_t		ft_randint(size_t length);

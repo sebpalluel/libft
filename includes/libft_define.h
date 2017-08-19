@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 21:51:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 23:40:25 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@
 # define W_KEY						13
 # define E_KEY						14
 # define R_KEY						15
-# define Y_KEY						15
+# define Y_KEY						16
 # define P_KEY						35
 # define L_KEY						37
 # define N_KEY						45
