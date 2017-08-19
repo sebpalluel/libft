@@ -6,16 +6,16 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 18:48:38 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/16 18:50:22 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 17:37:14 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-uint32_t		ft_rand(void)
+uintmax_t		ft_rand(void)
 {
 	static void	*i;
 
 	i = malloc(0);
-	return ((uint32_t)i / 10);
+	return ((uintmax_t)i / 10);
 }

@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/08/16 18:57:34 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/08/19 21:56:01 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -29,6 +29,7 @@ TABPATH = tab/
 PRINTPATH = print/
 GFXPATH = gfx/
 RANDPATH = rand/
+FDPATH = fd/
 
 SRC		=	$(MEMPATH)ft_memset.c\
 			$(MEMPATH)ft_bzero.c\
@@ -147,12 +148,19 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(GFXPATH)ft_vec3cpy.c\
 			$(GFXPATH)ft_vec3new.c\
 			$(GFXPATH)ft_vec3populate.c\
+			$(GFXPATH)ft_mlx_keytoint.c\
+			$(GFXPATH)ft_mlx_keytonumchar.c\
 			$(RANDPATH)ft_hash.c\
 			$(RANDPATH)ft_hash32.c\
 			$(RANDPATH)ft_rand.c\
+			$(RANDPATH)ft_rand.c\
 			$(RANDPATH)ft_randint.c\
+			$(RANDPATH)ft_random.c\
 			$(RANDPATH)ft_rol.c\
 			$(RANDPATH)ft_ror.c\
+			$(FDPATH)ft_open.c\
+			$(FDPATH)ft_close.c\
+			$(FDPATH)ft_create_file.c\
 OBJS 	=	$(SRCS:.c=.o)
 
 .PHONY: all build clean fclean re

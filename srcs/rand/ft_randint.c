@@ -6,16 +6,16 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 18:51:11 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/16 18:55:02 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 17:37:45 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-uint32_t		ft_randint(int length)
+uintmax_t		ft_randint(size_t length)
 {
-	uint32_t	rand;
-	uint32_t	ret;
+	uintmax_t	rand;
+	uintmax_t	ret;
 
 	ret = 0;
 	while (ft_intlen(ret) < length || ret == 0)

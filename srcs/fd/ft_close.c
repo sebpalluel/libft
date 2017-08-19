@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_close.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/16 18:53:11 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 17:38:33 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/19 20:25:38 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/19 20:33:12 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(int nbr)
+int	ft_close(t_fd *fd)
 {
-	int	ret;
-
-	ret = (nbr == 0) ? 1 : 0;
-	while (nbr != 0)
-	{
-		nbr /= 10;
-		ret++;
-	}
-	return (ret);
+	if (!fd || fd->path == NULL)
+		return (-1);
+	free (fd->path);
+	if (close(fd->fd) == -1)
+		return (-1);
+	return (0);
 }

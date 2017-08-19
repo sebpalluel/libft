@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/18 16:38:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 21:51:34 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,18 @@
 
 # define MAX_INT					2147483647
 # define MIN_INT					-2147483648
+# define MAX_INT_DECIMAL			11
 # define BUFF_SIZE 					50
 # define FD_MAX						256
 # define READ_OK					1
 # define READ_EOF					0
-# define READ_ERR					-1
+# define READ_ERR					1
+
+# define OK							0
+# define ERROR						1
 
 # define ESC						53
+# define ENTER						36
 # define LEFT						123
 # define RIGHT						124
 # define DOWN						125
@@ -46,8 +51,10 @@
 # define W_KEY						13
 # define E_KEY						14
 # define R_KEY						15
+# define Y_KEY						15
 # define P_KEY						35
 # define L_KEY						37
+# define N_KEY						45
 # define ZERO						29
 # define ONE						18
 # define TWO						19

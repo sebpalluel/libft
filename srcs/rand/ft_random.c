@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen.c                                        :+:      :+:    :+:   */
+/*   ft_random.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/16 18:53:11 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 17:38:33 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/19 16:39:39 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/19 17:37:16 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(int nbr)
+uintmax_t	ft_random(uintmax_t min, uintmax_t max, uintmax_t res)
 {
-	int	ret;
-
-	ret = (nbr == 0) ? 1 : 0;
-	while (nbr != 0)
-	{
-		nbr /= 10;
-		ret++;
-	}
-	return (ret);
+	return (ft_randint(res) % (max - min + 1) + min);
 }

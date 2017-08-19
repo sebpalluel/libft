@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/16 18:54:54 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/19 21:53:11 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 # define LIBFT_H
 # include <strings.h>
 # include <math.h>
+# include <errno.h>
 # include <pthread.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <fcntl.h>
 # include <limits.h>
 # include "../minilibx/mlx.h"
 # include "libft_struct.h"
@@ -53,6 +55,8 @@ void			ft_pixpopulate(t_pix *to_pix, int x, int y, int z);
 void			ft_vec3cpy(t_vec3 *vec_from, t_vec3 *vec_to);
 t_vec3			*ft_vec3new(double x, double y, double z);
 void			ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z);
+int				ft_mlx_keytoint(int keycode);
+char			ft_mlx_keytonumchar(int keycode);
 
 void			ft_putchar(char c);
 void			ft_putendl(char const *s);
@@ -124,7 +128,7 @@ long int		ft_strtol(const char *str, int base);
 
 int				ft_intmin(int *array, size_t size);
 int				ft_intmax(int *array, size_t size);
-int				ft_intlen(int nbr);
+size_t			ft_intlen(int nbr);
 int				*ft_intdup(int *array, size_t width);
 int				ft_getnbr(char *str);
 
@@ -156,9 +160,14 @@ void			ft_printstrarray(char **array);
 
 unsigned int	ft_ror(const unsigned int value, int shift);
 unsigned int	ft_rol(const unsigned int value, int shift);
-uint32_t		ft_hash32( uint32_t val);
+uintmax_t		ft_hash32(uintmax_t val);
 unsigned long	ft_hash(unsigned char *str);
-uint32_t		ft_rand(void);
-uint32_t		ft_randint(int length);
+uintmax_t		ft_rand(void);
+uintmax_t		ft_randint(size_t length);
+uintmax_t		ft_random(uintmax_t min, uintmax_t max, uintmax_t res);
+
+size_t			ft_create_file(t_fd *fd, char *filename, int chmod);
+t_fd			ft_open(const char *path, int flags, int rights);
+int				ft_close(t_fd *fd);
 
 #endif
