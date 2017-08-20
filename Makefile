@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/08/20 00:43:53 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/08/20 15:40:27 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -158,12 +158,13 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(RANDPATH)ft_random.c\
 			$(RANDPATH)ft_rol.c\
 			$(RANDPATH)ft_ror.c\
+			$(FDPATH)ft_create_file.c\
 			$(FDPATH)ft_open.c\
 			$(FDPATH)ft_close.c\
-			$(FDPATH)ft_create_file.c\
-OBJS 	=	$(SRCS:.c=.o)
 
 .PHONY: all build clean fclean re
+
+OBJS 	=	$(SRCS:.c=.o)
 
 CMP		=	gcc
 FLAGS	=	-ggdb -Wall -Wextra -Werror
