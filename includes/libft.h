@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 15:41:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/20 19:14:50 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ t_vec3			*ft_vec3new(double x, double y, double z);
 void			ft_vec3populate(t_vec3 *to_vec3, double x, double y, double z);
 int				ft_mlx_keytoint(int keycode);
 char			ft_mlx_keytonumchar(int keycode);
+char			ft_mlx_keytoletterchar(int keycode);
+char			ft_mlx_printkeytochar(int keycode);
 
 void			ft_putchar(char c);
 void			ft_putendl(char const *s);

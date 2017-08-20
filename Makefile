@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/08/20 15:40:27 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/08/20 19:15:54 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -150,6 +150,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(GFXPATH)ft_vec3populate.c\
 			$(GFXPATH)ft_mlx_keytoint.c\
 			$(GFXPATH)ft_mlx_keytonumchar.c\
+			$(GFXPATH)ft_mlx_keytoletterchar.c\
+			$(GFXPATH)ft_mlx_printkeytochar.c\
 			$(RANDPATH)ft_hash.c\
 			$(RANDPATH)ft_hash32.c\
 			$(RANDPATH)ft_rand.c\
