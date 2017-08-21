@@ -6,30 +6,54 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:01:20 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 16:56:06 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 19:26:25 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+static void	custom(char *command, char *tmp, char *file_path, int mode)
+{
+	char *tmp2;
+
+	tmp2 = NULL;
+
+	if (mode)
+	{
+		tmp2 = ft_strjoin(tmp, file_path);
+		command = ft_strjoin("chmod ", tmp2);
+		free (tmp2);
+	}
+	system(command);
+	free (command);
+	if (tmp != NULL)
+		free (tmp);
+	if (file_path != NULL)
+		free (file_path);
+}
 
 size_t		ft_create_file(t_fd *fd, int chmod)
 {
-	char	*touch_file;
-	char	*chmod_file;
-	char	space;
+	char	*file_path;
+	char	*command;
+	char	*tmp;
+	int		len;
 
-	space = ' ';
-	touch_file = ft_strjoin(fd->path, fd->name);
-	touch_file = ft_strjoin("touch ", fd->path);
-	chmod_file = ft_strjoin("chmod ", ft_strncat(ft_itoa(chmod), &space, 1));
-	chmod_file = ft_strjoin(chmod_file, fd->path);
-	if (chmod_file != NULL && touch_file != NULL)
-	{
-		system(touch_file);
-		system(chmod_file);
-		free(chmod_file);
-		free(touch_file);
-		return (OK);
-	}
-	return (ERROR);
+	file_path = ft_strjoin(fd->path, fd->name);
+	command = ft_strjoin("touch ", file_path);
+	if (file_path == NULL && command == NULL)
+		return (ERROR);
+	else
+		custom(command, NULL, NULL, 0);
+	len = ft_strlen(ft_itoa(chmod));
+	tmp = ft_strnew(len + 1);
+	tmp = ft_strdup(ft_itoa(chmod));
+	tmp[len] = ' ';
+	tmp[len + 1] = '\0';
+	if (tmp == NULL && command == NULL)
+		return (ERROR);
+	else
+		custom(command, tmp, file_path, 1);
+	return (OK);
 }

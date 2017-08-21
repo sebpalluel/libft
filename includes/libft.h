@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 17:11:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 18:22:36 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ size_t			ft_strlen (const char *s);
 char			*ft_strncat(char *dest, const char *src, size_t n);
 char			*ft_strncpy(char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
-char			*ft_strstr(const char *s1, const char *s2);
+char			*ft_strstr(const char *str, const char *tofind);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);

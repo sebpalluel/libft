@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/20 18:36:03 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 19:14:39 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 18:30:16 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ static char	ft_specialchar(int keycode)
 
 char		ft_mlx_printkeytochar(int keycode)
 {
-	char 	c;
-
-	if (((c = ft_mlx_keytoint(keycode)) != '\0') || \
-			((c = ft_mlx_keytoletterchar(keycode)) != '\0') || \
-		((c = ft_specialchar(keycode) != '\0')))
-		return (c);
+	if (ft_mlx_keytonumchar(keycode) != '\0')
+		return (ft_mlx_keytonumchar(keycode));
+	else if (ft_mlx_keytoletterchar(keycode) != '\0')
+		return (ft_mlx_keytoletterchar(keycode));
+	else if (ft_specialchar(keycode) != '\0')
+		return (ft_specialchar(keycode));
 	return ('\0');
 }

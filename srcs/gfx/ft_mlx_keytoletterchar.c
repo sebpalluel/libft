@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/20 18:59:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 19:00:37 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 18:31:40 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 static char	ft_mlx_keytoletterchar3(int keycode)
 {
 	if (keycode == C_KEY)
-		return ('p');
+		return ('c');
 	else if (keycode == V_KEY)
-		return ('a');
+		return ('v');
 	else if (keycode == B_KEY)
-		return ('s');
+		return ('b');
 	else if (keycode == N_KEY)
-		return ('d');
+		return ('n');
 	else if (keycode == M_KEY)
-		return ('f');
+		return ('m');
 	return ('\0');
 }
 
@@ -63,18 +63,18 @@ char		ft_mlx_keytoletterchar(int keycode)
 	else if (keycode == W_KEY)
 		return ('w');
 	else if (keycode == E_KEY)
-		return ('w');
+		return ('e');
 	else if (keycode == R_KEY)
-		return ('w');
+		return ('r');
 	else if (keycode == T_KEY)
-		return ('w');
+		return ('t');
 	else if (keycode == Y_KEY)
-		return ('w');
+		return ('y');
 	else if (keycode == U_KEY)
-		return ('w');
+		return ('u');
 	else if (keycode == I_KEY)
-		return ('w');
+		return ('i');
 	else if (keycode == O_KEY)
-		return ('w');
+		return ('o');
 	return (ft_mlx_keytoletterchar2(keycode));
 }
