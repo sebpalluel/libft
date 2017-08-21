@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 17:08:26 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 17:10:07 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,7 +169,8 @@ uintmax_t		ft_randint(size_t length);
 uintmax_t		ft_random(uintmax_t min, uintmax_t max, uintmax_t res);
 
 size_t			ft_create_file(t_fd *fd, int chmod);
-t_fd			ft_open(const char *path, const char *name, int flags, int rights)
+t_fd			ft_open(const char *path, const char *name, \
+		int flags, int rights);
 int				ft_close(t_fd *fd);
 
 #endif
