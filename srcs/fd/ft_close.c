@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 20:25:38 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 20:33:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 17:08:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 int	ft_close(t_fd *fd)
 {
-	if (!fd || fd->path == NULL)
+	if (!fd || (fd->path == NULL && fd->name == NULL))
 		return (-1);
 	free (fd->path);
+	free (fd->name);
 	if (close(fd->fd) == -1)
 		return (-1);
 	return (0);

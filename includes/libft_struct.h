@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 19:31:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 20:32:32 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 16:52:50 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef	struct		s_fd
 	int				fd;
 	int				pos;
 	char			*path;
+	char			*name;
 	t_char			*buffer;
 	int				flags;
 	int				rights;

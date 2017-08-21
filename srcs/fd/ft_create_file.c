@@ -6,20 +6,20 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:01:20 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 15:35:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 16:56:06 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_create_file(t_fd *fd, char *filename, int chmod)
+size_t		ft_create_file(t_fd *fd, int chmod)
 {
 	char	*touch_file;
 	char	*chmod_file;
 	char	space;
 
 	space = ' ';
-	fd->path = ft_strjoin(fd->path, filename);
+	touch_file = ft_strjoin(fd->path, fd->name);
 	touch_file = ft_strjoin("touch ", fd->path);
 	chmod_file = ft_strjoin("chmod ", ft_strncat(ft_itoa(chmod), &space, 1));
 	chmod_file = ft_strjoin(chmod_file, fd->path);
