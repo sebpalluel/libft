@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 20:33:45 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 17:06:30 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/21 17:11:07 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_fd		ft_open(const char *path, const char *name, int flags, int rights)
+t_fd		ft_open(const char *path, char *name, int flags, int rights)
 {
 	char	*tmp;
 	int		fd;
