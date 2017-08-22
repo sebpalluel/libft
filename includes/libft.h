@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/22 18:21:22 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/22 19:01:14 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -159,6 +159,7 @@ void			**ft_lsttoarray(t_list *lst);
 
 void			ft_printfloatmatrix(float **mat, size_t size);
 void			ft_printintarray(int **map, size_t  width, size_t height);
+void			ft_printsize_tarray(size_t **map, size_t width, size_t height);
 void			ft_printstrarray(char **array);
 
 unsigned int	ft_ror(const unsigned int value, int shift);
