@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabnew.c                                        :+:      :+:    :+:   */
+/*   ft_tabnewsize_t.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/16 20:09:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 16:52:41 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/22 18:22:31 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	**ft_tabnew(size_t height, size_t width)
+size_t	**ft_tabnewsize_t(size_t width, size_t height)
 {
 	size_t	i;
 	size_t	**tab;
@@ -25,5 +25,5 @@ void	**ft_tabnew(size_t height, size_t width)
 		i++;
 	}
 	tab[height] = NULL;
-	return ((void **)tab);
+	return (tab);
 }

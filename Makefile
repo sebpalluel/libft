@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/08/20 19:15:54 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/08/22 18:22:20 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -44,7 +44,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(TABPATH)ft_tabfree.c\
 			$(TABPATH)ft_h_flip.c\
 			$(TABPATH)ft_v_flip.c\
-			$(TABPATH)ft_tabnew.c\
+			$(TABPATH)ft_tabnewsize_t.c\
+			$(TABPATH)ft_tabnewstr.c\
 			$(TABPATH)ft_tabdepth.c\
 			$(TABPATH)ft_tablen.c\
 			$(TABPATH)ft_tabstrcpy.c\

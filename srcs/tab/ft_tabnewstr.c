@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_open.c                                          :+:      :+:    :+:   */
+/*   ft_tabnewstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/19 20:33:45 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 19:50:52 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/21 20:20:56 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/22 18:21:12 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_fd		ft_open(const char *path, char *name, int flags, int rights)
+char	**ft_tabnewstr(size_t width, size_t height)
 {
-	char	*tmp;
-	int		fd;
+	size_t	i;
+	char	**tab;
 
-	if (path == NULL && name == NULL)
-		return ((t_fd){-1, 0, NULL, NULL, NULL, 0, 0});
-	else
-		tmp = ft_strjoin(path, name);
-	if ((fd = open(tmp, flags, rights)) < 0)
+	i = 0;
+	tab = (char **)ft_memalloc(sizeof(char *) * (height + 1));
+	while (tab && i < height)
 	{
-		free (tmp);
-		return ((t_fd){-1, 0, NULL, NULL, NULL, 0, 0});
+		tab[i] = (char *)ft_memalloc(sizeof(char) * width + 1);
+		tab[i][width] = '\0';
+		i++;
 	}
-	free (tmp);
-	return ((t_fd){fd, 0, (char *)path, name, NULL, flags, rights});
+	tab[height] = NULL;
+	return (tab);
 }
