@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 19:31:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 16:52:50 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/23 00:28:47 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ typedef struct		s_vec3
 	double			y;
 	double			z;
 }					t_vec3;
+
+typedef struct		s_vec3u
+{
+	size_t			x;
+	size_t			y;
+	size_t			z;
+}					t_vec3u;
 
 typedef struct		s_pix
 {

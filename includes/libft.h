@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/22 19:01:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/30 21:15:38 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,8 @@ char			*ft_strchr(const char *src, int c);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strdup(const char *src);
-size_t			ft_strlen (const char *s);
+size_t			ft_strlen(const char *s);
+char			*ft_straddchar(char *src, char c);
 char			*ft_strncat(char *dest, const char *src, size_t n);
 char			*ft_strncpy(char *s1, const char *s2, size_t n);
 char			*ft_strrchr(const char *s, int c);
@@ -171,7 +172,7 @@ uintmax_t		ft_randint(size_t length);
 uintmax_t		ft_random(uintmax_t min, uintmax_t max, uintmax_t res);
 
 size_t			ft_create_file(t_fd *fd, int chmod);
-t_fd			ft_open(const char *path, char *name, int flags, int rights);
+size_t			ft_open(t_fd *fd, int flags, int rights);
 int				ft_close(t_fd *fd);
 
 #endif

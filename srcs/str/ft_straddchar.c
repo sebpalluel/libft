@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_open.c                                          :+:      :+:    :+:   */
+/*   ft_straddchar.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/19 20:33:45 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/30 19:18:52 by psebasti         ###   ########.fr       */
+/*   Created: 2017/08/30 21:04:34 by psebasti          #+#    #+#             */
+/*   Updated: 2017/08/30 21:19:30 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_open(t_fd *fd, int flags, int rights)
+char		*ft_straddchar(char *src, char c)
 {
-	char	*tmp;
+	char	*dest;
+	size_t	length;
 
-	if (fd->path == NULL && fd->name == NULL)
-	{
-		fd->fd = -1;
-		return (ERROR);
-	}
-	tmp = ft_strjoin(fd->path, fd->name);
-	if (tmp != NULL && (fd->fd = open(tmp, flags, rights)) <= 0)
-	{
-		free (tmp);
-		return (ERROR);
-	}
-	free (tmp);
-	return (OK);
+	length = ft_strlen(src) + 1;
+	if (!(dest = (char*)ft_memalloc(length + 1)))
+		return (NULL);
+	ft_memcpy((void*)dest, (void*)src, length);
+	dest[length] = c;
+	dest[length + 1] = '\0';
+	return (dest);
 }

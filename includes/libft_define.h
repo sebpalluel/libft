@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 18:53:15 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/22 20:03:19 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,5 +114,13 @@
 # define PROPERTYCHANGEMASK			(1L<<22)
 # define COLORMAPCHANGEMASK			(1L<<23)
 # define OWNERGRABBUTTONMASK		(1L<<24)
+
+# define ANSI_COLOR_RED				"\x1b[31m"
+# define ANSI_COLOR_GREEN			"\x1b[32m"
+# define ANSI_COLOR_YELLOW			"\x1b[33m"
+# define ANSI_COLOR_BLUE			"\x1b[34m"
+# define ANSI_COLOR_MAGENTA			"\x1b[35m"
+# define ANSI_COLOR_CYAN			"\x1b[36m"
+# define ANSI_COLOR_RESET			"\x1b[0m"
 
 #endif
