@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/22 20:03:19 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/08/30 22:51:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # define FD_MAX						256
 # define READ_OK					1
 # define READ_EOF					0
-# define READ_ERR					1
+# define READ_ERR					-1
 
 # define OK							0
 # define ERROR						1

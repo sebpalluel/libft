@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/30 21:15:38 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/09/08 17:14:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_color			*ft_colornew(unsigned char r, unsigned char g, \
 t_color			*ft_colorparse(char *arg);
 t_color			*ft_hexcolor(int hexValue);
 void			ft_hextocolor(t_color *col, int hexValue);
+int				ft_colortohex(t_color *col);
 void			ft_mlxdelete(t_mlx *mlx);
 void			ft_imgclean(t_img *img, size_t width, size_t height);
 void			ft_imgdel(t_img *img, void *mlx);
