@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/09/08 17:15:15 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/09/25 13:33:13 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -189,14 +189,19 @@ all: $(NAME)
 $(NAME): build $(LIBS) $(OBJS)
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
+	@echo "libft building finished"
 
 build:
+	@echo "building libft"
 	@mkdir -p $(OBJDIR)
 	@mkdir -p $(OBJS_DIRS)
 
 clean:
+	@echo "cleaning libft"
 	@rm -f $(LIBS)
 	@rm -rf $(OBJDIR)
+	@echo "libft cleaning finished"
+
 
 fclean: clean
 	@rm -f $(NAME)
