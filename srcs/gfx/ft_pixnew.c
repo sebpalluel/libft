@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 15:09:55 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 15:11:07 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:19:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_pix		*ft_pixnew(int x, int y, int z)
 {
-	t_pix	*pix = NULL;
+	t_pix	*pix;
 
 	if ((pix = (t_pix*)malloc(sizeof(t_pix))))
 	{

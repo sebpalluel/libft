@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/08 17:11:38 by psebasti          #+#    #+#             */
-/*   Updated: 2017/09/08 17:14:28 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:16:28 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int			ft_colortohex(t_color *col)
 {
 	if (col)
 		return ((col->r & 0xff) << 16) + ((col->g & 0xff) << 8) \
-			+ (col->b & 0xff);
+		+ (col->b & 0xff);
 	return (0);
 }

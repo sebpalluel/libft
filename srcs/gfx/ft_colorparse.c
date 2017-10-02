@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 13:52:54 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 17:45:13 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:16:59 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_color		*ft_colorparse(char *arg)
 {
-	char	**arg_color = NULL;
+	char	**arg_color;
 
 	if (ft_strlen(arg) < 5 || ft_strlen(arg) > 11)
 		return (NULL);

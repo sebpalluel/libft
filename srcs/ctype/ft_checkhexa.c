@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 15:07:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 17:45:31 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:13:59 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int					ft_checkhexa(char *str)
 {
-	size_t 			i;
+	size_t			i;
 	size_t			hexa_count;
 	size_t			prefix;
 

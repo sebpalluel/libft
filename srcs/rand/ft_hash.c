@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 18:00:02 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/16 18:48:49 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:25:45 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 unsigned long		ft_hash(unsigned char *str)
 {
-    unsigned long	hash = 5381;
-    int				c;
+	unsigned long	hash;
+	int				c;
 
-    while ((c = *str++))
-        hash = hash * 33 + c;
-    return (hash);
+	hash = 5381;
+	while ((c = *str++))
+		hash = hash * 33 + c;
+	return (hash);
 }

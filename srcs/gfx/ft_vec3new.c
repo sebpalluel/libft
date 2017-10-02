@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 13:33:26 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 16:11:13 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:20:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_vec3		*ft_vec3new(double x, double y, double z)
 {
-	t_vec3	*vec3 = NULL;
+	t_vec3	*vec3;
 
 	if ((vec3 = (t_vec3*)malloc(sizeof(t_vec3))))
 	{

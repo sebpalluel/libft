@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:01:20 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/02 19:12:01 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:15:23 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,18 @@ static void	custom(char *command, char *tmp, char *file_path, int mode)
 	char *tmp2;
 
 	tmp2 = NULL;
-
 	if (mode)
 	{
 		tmp2 = ft_strjoin(tmp, file_path);
 		command = ft_strjoin("chmod ", tmp2);
-		free (tmp2);
+		free(tmp2);
 	}
 	system(command);
-	free (command);
+	free(command);
 	if (tmp != NULL)
-		free (tmp);
+		free(tmp);
 	if (file_path != NULL)
-		free (file_path);
+		free(file_path);
 }
 
 size_t		ft_create_file(t_fd *fd, int chmod)

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 20:33:45 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/30 19:18:52 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:15:39 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ size_t		ft_open(t_fd *fd, int flags, int rights)
 	tmp = ft_strjoin(fd->path, fd->name);
 	if (tmp != NULL && (fd->fd = open(tmp, flags, rights)) <= 0)
 	{
-		free (tmp);
+		free(tmp);
 		return (ERROR);
 	}
-	free (tmp);
+	free(tmp);
 	return (OK);
 }
