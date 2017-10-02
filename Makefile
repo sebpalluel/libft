@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/09/08 17:15:15 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/09/12 15:20:06 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -136,6 +136,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(GFXPATH)ft_imgclean.c\
 			$(GFXPATH)ft_imgdel.c\
 			$(GFXPATH)ft_imgnew.c\
+			$(GFXPATH)ft_xmpnew.c\
 			$(GFXPATH)ft_initwindow.c\
 			$(GFXPATH)ft_matrixadd.c\
 			$(GFXPATH)ft_matrixhomothety.c\
