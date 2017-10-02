@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/09/08 17:14:26 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 18:07:44 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include "libft_define.h"
 
 int				get_next_line(const int fd, char **line);
-void 			ft_swap(void *a, void *b, size_t nbytes);
+void			ft_swap(void *a, void *b, size_t nbytes);
 
 void			ft_colorcpy(t_color *clr_from, t_color *clr_to);
 void			ft_color(t_color *clr, \
@@ -33,13 +33,14 @@ void			ft_color(t_color *clr, \
 t_color			*ft_colornew(unsigned char r, unsigned char g, \
 				unsigned char b);
 t_color			*ft_colorparse(char *arg);
-t_color			*ft_hexcolor(int hexValue);
-void			ft_hextocolor(t_color *col, int hexValue);
+t_color			*ft_hexcolor(int hexvalue);
+void			ft_hextocolor(t_color *col, int hexvalue);
 int				ft_colortohex(t_color *col);
 void			ft_mlxdelete(t_mlx *mlx);
 void			ft_imgclean(t_img *img, size_t width, size_t height);
 void			ft_imgdel(t_img *img, void *mlx);
 t_img			*ft_imgnew(void *mlx, size_t x, size_t y);
+t_img			*ft_xmpnew(void *mlx, char *xmp, size_t x, size_t y);
 t_mlx			*ft_initwindow(char *name, size_t width, size_t height);
 void			ft_matrixadd(double **ret, double **m, double **n, int size);
 void			ft_matrixhomothety(double **ret, int factor);
@@ -90,9 +91,9 @@ int				ft_pow(int n, int p);
 
 size_t			ft_tablen(char **tab);
 int				ft_tabdepth(void **tab);
-void 			ft_h_flip(void **array, size_t columns, size_t rows, \
+void			ft_h_flip(void **array, size_t columns, size_t rows,\
 				size_t nbytes);
-void			ft_v_flip(void **array, size_t columns, size_t rows, \
+void			ft_v_flip(void **array, size_t columns, size_t rows,\
 				size_t nbytes);
 int				**ft_tabintcpy(int **array, size_t width);
 char			**ft_tabstrcpy(char **str);
@@ -160,7 +161,7 @@ void			ft_lstfree(t_list **lst);
 void			**ft_lsttoarray(t_list *lst);
 
 void			ft_printfloatmatrix(float **mat, size_t size);
-void			ft_printintarray(int **map, size_t  width, size_t height);
+void			ft_printintarray(int **map, size_t width, size_t height);
 void			ft_printsize_tarray(size_t **map, size_t width, size_t height);
 void			ft_printstrarray(char **array);
 
