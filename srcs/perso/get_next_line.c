@@ -6,116 +6,115 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/23 14:46:00 by psebasti          #+#    #+#             */
-/*   Updated: 2017/02/28 20:29:01 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:05:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			copy_buff(t_fd *fd, char *src, t_char *buffer)
+static int			write_line(t_str **current, char **target, int num_char)
 {
-	size_t			i;
+	t_str			*prev;
+	t_str			*buf;
+	int				i;
 
+	if (!(*target = ft_strnew(num_char)))
+		return (READ_ERR);
 	i = 0;
-	while (src[i])
+	buf = *current;
+	while (buf && i != num_char)
 	{
-		if (buffer == NULL)
-		{
-			fd->buffer = (t_char *)ft_memalloc(sizeof(t_char));
-			buffer = fd->buffer;
-		}
-		else
-		{
-			buffer->next = (t_char *)ft_memalloc(sizeof(t_char));
-			buffer = buffer->next;
-		}
-		if (buffer == NULL)
-			return (READ_ERR);
-		buffer->c = src[i];
-		buffer->next = NULL;
+		(*target)[i] = buf->c;
+		prev = buf;
+		buf = buf->next;
+		free(prev);
 		i++;
 	}
+	if (buf)
+	{
+		*current = buf->next;
+		free(buf);
+	}
+	else
+		*current = NULL;
 	return (READ_OK);
 }
 
-static int			read_buff(int fd, t_fd *fd_tab)
+static int			get_line(t_str *buffer, int *num_char)
 {
-	t_char			*buffer = NULL;
-	char			*src = NULL;
-	int				ret;
-
-	buffer = fd_tab[fd].buffer;
-	while (buffer && buffer->next)
+	*num_char = 0;
+	while (buffer && buffer->c != '\n' && buffer->c != '\0')
+	{
+		(*num_char)++;
 		buffer = buffer->next;
-	if (!(src = ft_strnew(BUFF_SIZE)))
-		return (READ_ERR);
-	ret = read(fd, src, BUFF_SIZE);
-	if (copy_buff(&fd_tab[fd], src, buffer) < 0)
-		return (READ_ERR);
-	free(src);
-	return (ret);
+	}
+	return (buffer ? 1 : 0);
 }
 
-static void			copy_line(size_t length, t_fd *fd, char **target)
+static int			copy_buff(t_str **buffer, char *src)
 {
-	char 			*line = NULL;
-	t_char			*current = NULL;
-	t_char			*prev = NULL;
+	t_str			*current;
 
-	line = ft_strnew(length);
-	length = 0;
-	current = fd->buffer;
-	while (current->c != '\n')
+	if (*src && *buffer == NULL)
 	{
-		line[length++] = current->c;
-		prev = current;
-		current = current->next;
-		free(prev);
+		if (!(*buffer = (t_str *)ft_memalloc(sizeof(t_str))))
+			return (READ_ERR);
+		(*buffer)->c = *src;
+		(*buffer)->next = NULL;
+		src++;
 	}
-	prev = current;
-	current = current->next;
-	free(prev);
-	fd->buffer = current;
-	*target = line;
-}
-
-static int			buffer_has_line(t_fd *fd, char **target)
-{
-	size_t			length;
-	t_char			*current = NULL;
-
-	current = fd->buffer;
-	if (current == NULL)
-		*target = NULL;
-	length = 0;
-	while (current != NULL && current->c != '\n')
-	{
+	current = *buffer;
+	while (current->next)
 		current = current->next;
-		length++;
-	}
-	if (current != NULL)
+	while (*src)
 	{
-		copy_line(length, fd, target);
-		return (1);
+		if (!(current->next = (t_str *)ft_memalloc(sizeof(t_str))))
+			return (READ_ERR);
+		current = current->next;
+		current->c = *src;
+		current->next = NULL;
+		src++;
 	}
 	return (0);
 }
 
-int					get_next_line(const int fd, char **line)
+static int			read_buff(t_str **buffer, int fd)
 {
-	static t_fd		fd_tab[FD_MAX];
+	char			src[BUFF_SIZE + 1];
+	char			*get_line;
 	int				ret;
 
-	if (fd < 0 || fd > FD_MAX || line == NULL)
+	ret = BUFF_SIZE;
+	get_line = NULL;
+	while (!get_line && ret == BUFF_SIZE)
+	{
+		ft_bzero(src, BUFF_SIZE + 1);
+		ret = read(fd, src, BUFF_SIZE);
+		if (ret > 0 && copy_buff(buffer, src) == -1)
+			return (READ_ERR);
+		get_line = ft_strchr(src, '\n');
+	}
+	return (ret);
+}
+
+int					get_next_line(const int fd, char **line)
+{
+	static t_str	*fd_tab[OPEN_MAX] = {NULL};
+	t_str			**buffer;
+	int				num_char;
+	int				ret;
+
+	if (fd < 0 || fd >= OPEN_MAX || !line || BUFF_SIZE < 1)
 		return (READ_ERR);
-	if (buffer_has_line(&fd_tab[fd], line))
-		return (READ_OK);
-	ret = 1;
-	while (!buffer_has_line(&fd_tab[fd], line) && ret > 0)
-		ret = read_buff(fd, fd_tab);
-	if (ret < 0)
-		return (READ_ERR);
-	if (ret > 0)
-		return (READ_OK);
-	return (READ_EOF);
+	buffer = &(fd_tab[fd]);
+	if (!get_line(*buffer, &num_char))
+	{
+		ret = read_buff(buffer, fd);
+		if (ret < 0)
+			return (READ_ERR);
+		if (ret == 0 && *buffer == NULL)
+			return (READ_EOF);
+	}
+	get_line(*buffer, &num_char);
+	return (write_line(buffer, line, num_char));
 }

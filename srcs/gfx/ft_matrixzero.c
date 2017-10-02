@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 13:40:30 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 13:40:52 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:11:11 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 
 double		**ft_matrixzero(int size)
 {
-	double	**ret = NULL;
-	int		xy[2];
+	double	**ret;
+	int		x;
+	int		y;
 
-	if (!(ret = (double**)malloc(sizeof(double*) * size + 1)))
+	ret = (double**)malloc(sizeof(double*) * size + 1);
+	if (ret == NULL)
 		return (NULL);
-	xy[0] = -1;
-	while (++xy[0] < size)
+	x = -1;
+	while (++x < size)
 	{
-		xy[1] = -1;
-		if (!(ret[xy[0]] = (double*)malloc(sizeof(double) * size)))
+		y = -1;
+		ret[x] = (double*)malloc(sizeof(double) * size);
+		if (ret[x] == NULL)
 			return (NULL);
-		while (++xy[1] < size)
-			ret[xy[0]][xy[1]] = 0;
+		while (++y < size)
+			ret[x][y] = 0;
 	}
 	ret[size] = NULL;
 	return (ret);

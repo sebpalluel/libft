@@ -6,12 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:01:20 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/21 19:27:28 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:12:01 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static void	custom(char *command, char *tmp, char *file_path, int mode)
 {

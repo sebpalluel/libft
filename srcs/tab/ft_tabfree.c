@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/16 18:44:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 16:33:02 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:08:41 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,5 @@ void	ft_tabfree(void **tab)
 		free(tab[i]);
 		i++;
 	}
-	if (tab)
 	free(tab);
 }

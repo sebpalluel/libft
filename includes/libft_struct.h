@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 19:31:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/23 00:28:47 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/02 19:10:27 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct		s_char
+typedef struct		s_str
 {
 	char			c;
-	struct s_char	*next;
-}					t_char;
+	struct s_str	*next;
+}					t_str;
 
 typedef	struct		s_fd
 {
@@ -32,7 +32,7 @@ typedef	struct		s_fd
 	int				pos;
 	char			*path;
 	char			*name;
-	t_char			*buffer;
+	t_str			*buffer;
 	int				flags;
 	int				rights;
 }					t_fd;
