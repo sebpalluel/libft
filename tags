@@ -175,8 +175,8 @@ font_vshader	minilibx/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_
 ft_atoi	srcs/stdlib/ft_atoi.c	/^int		ft_atoi(const char *str)$/;"	f
 ft_bzero	srcs/mem/ft_bzero.c	/^void		ft_bzero(void *s, size_t n)$/;"	f
 ft_checkdigit	srcs/ctype/ft_checkdigit.c	/^int			ft_checkdigit(char *str)$/;"	f
-ft_checkdigit	srcs/ctype/ft_checkint.c	/^int			ft_checkdigit(char *str)$/;"	f
 ft_checkhexa	srcs/ctype/ft_checkhexa.c	/^int					ft_checkhexa(char *str)$/;"	f
+ft_checkint	srcs/ctype/ft_checkint.c	/^int			ft_checkint(char *str)$/;"	f
 ft_close	srcs/fd/ft_close.c	/^int	ft_close(t_fd *fd)$/;"	f
 ft_color	srcs/gfx/ft_color.c	/^void	ft_color(t_color *clr, \\$/;"	f
 ft_colorcpy	srcs/gfx/ft_colorcpy.c	/^void	ft_colorcpy(t_color *clr_from, t_color *clr_to)$/;"	f

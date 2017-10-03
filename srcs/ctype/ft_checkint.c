@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/03 12:08:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/03 12:20:20 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:47:37 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_checkdigit(char *str)
+int			ft_checkint(char *str)
 {
 	size_t	i;
 
