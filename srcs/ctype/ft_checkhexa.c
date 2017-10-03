@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 15:07:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/02 19:13:59 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:16:44 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int					ft_checkhexa(char *str)
 			prefix = 1;
 			i += 2;
 		}
-		if (prefix && ft_ishexa(str[i]) && hexa_count < 7)
+		if (prefix && ft_ishexa(str[i]) == OK && hexa_count < 7)
 			hexa_count++;
 		else
-			return (0);
+			return (ERROR);
 		i++;
 	}
-	return (1);
+	return (OK);
 }

@@ -6,13 +6,15 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:40:42 by psebasti          #+#    #+#             */
-/*   Updated: 2016/11/11 15:45:41 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:17:20 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+		return (OK);
+	return (ERROR);
 }

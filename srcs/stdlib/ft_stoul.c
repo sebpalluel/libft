@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:04:31 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/07 16:08:19 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:26:55 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ unsigned long		ft_stoul(const char *str, int base)
 
 	if (base < 0 || base == 1 || base > 16 || !(base))
 		return (0);
-	while (ft_isspace(*str))
+	while (ft_isspace(*str) == OK)
 		str++;
 	sign = (*str == '-' || *str == '+') ? *str++ : '+';
 	while (*str == '0')

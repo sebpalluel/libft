@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:41:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 18:35:26 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:15:35 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_isprint(int c)
 {
 	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+		return (OK);
+	return (ERROR);
 }

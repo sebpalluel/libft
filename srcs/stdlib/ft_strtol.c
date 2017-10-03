@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/07 16:02:21 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/07 16:03:50 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 12:27:16 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ long int				ft_strtol(const char *str, int base)
 	unsigned long		n;
 
 	tmp = (char *)str;
-	while (ft_isspace(*tmp))
+	while (ft_isspace(*tmp) == OK)
 		tmp++;
 	n = ft_stoul(str, base);
 	if (*tmp == '-' && n <= LONG_MAX)
