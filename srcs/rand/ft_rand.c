@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 18:48:38 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/19 17:37:14 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/03 19:44:09 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 uintmax_t		ft_rand(void)
 {
-	static void	*i;
+	uintmax_t	rand_num;
 
-	i = malloc(0);
-	return ((uintmax_t)i / 10);
+	rand_num = rand();
+	return (rand_num);
 }
