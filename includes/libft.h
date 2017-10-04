@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/03 19:41:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/04 17:25:21 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int				**ft_tabintcpy(int **array, size_t width);
 char			**ft_tabstrcpy(char **str);
 void			ft_tabfree(void **tab);
 size_t			**ft_tabnewsize_t(size_t width, size_t height);
+int				**ft_tabnewint(size_t width, size_t height);
 char			**ft_tabnewstr(size_t width, size_t height);
 
 char			*ft_strcat(char *src, const char *dest);

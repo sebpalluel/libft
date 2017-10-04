@@ -307,8 +307,9 @@ ft_tabdepth	srcs/tab/ft_tabdepth.c	/^int			ft_tabdepth(void **tab)$/;"	f
 ft_tabfree	srcs/tab/ft_tabfree.c	/^void	ft_tabfree(void **tab)$/;"	f
 ft_tabintcpy	srcs/tab/ft_tabintcpy.c	/^int			**ft_tabintcpy(int **array, size_t width)$/;"	f
 ft_tablen	srcs/tab/ft_tablen.c	/^size_t		ft_tablen(char **tab)$/;"	f
+ft_tabnewint	srcs/tab/ft_tabnewint.c	/^int			**ft_tabnewint(size_t width, size_t height)$/;"	f
 ft_tabnewsize_t	srcs/tab/ft_tabnew.c	/^size_t	**ft_tabnewsize_t(size_t width, size_t height)$/;"	f
-ft_tabnewsize_t	srcs/tab/ft_tabnewsize_t.c	/^size_t	**ft_tabnewsize_t(size_t width, size_t height)$/;"	f
+ft_tabnewsize_t	srcs/tab/ft_tabnewsize_t.c	/^size_t		**ft_tabnewsize_t(size_t width, size_t height)$/;"	f
 ft_tabnewstr	srcs/tab/ft_tabnewstr.c	/^char	**ft_tabnewstr(size_t width, size_t height)$/;"	f
 ft_tabstrcpy	srcs/tab/ft_tabstrcpy.c	/^char		**ft_tabstrcpy(char **str)$/;"	f
 ft_tolower	srcs/str/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f

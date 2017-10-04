@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/16 20:09:13 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/22 18:21:27 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/04 17:24:25 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	**ft_tabnewsize_t(size_t width, size_t height)
+size_t		**ft_tabnewsize_t(size_t width, size_t height)
 {
 	size_t	i;
 	size_t	**tab;
