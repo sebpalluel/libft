@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 20:26:39 by psebasti          #+#    #+#             */
-/*   Updated: 2017/08/20 18:35:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/05 13:07:32 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char		ft_mlx_keytonumchar(int keycode)
 		return ('8');
 	else if (keycode == NINE)
 		return ('9');
+	else if (keycode == MINUS)
+		return ('-');
 	else
 		return ('\0');
 }
