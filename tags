@@ -303,6 +303,7 @@ ft_strsub	srcs/str/ft_strsub.c	/^char	*ft_strsub(char const *s, unsigned int sta
 ft_strtol	srcs/stdlib/ft_strtol.c	/^long int				ft_strtol(const char *str, int base)$/;"	f
 ft_strtrim	srcs/str/ft_strtrim.c	/^char	*ft_strtrim(char const *s)$/;"	f
 ft_swap	srcs/perso/ft_swap.c	/^void				ft_swap(void *a, void *b, size_t nbytes)$/;"	f
+ft_tab3newstr	srcs/tab/ft_tab3newstr.c	/^char	***ft_tab3newstr(size_t width, size_t height)$/;"	f
 ft_tabdepth	srcs/tab/ft_tabdepth.c	/^int			ft_tabdepth(void **tab)$/;"	f
 ft_tabfree	srcs/tab/ft_tabfree.c	/^void	ft_tabfree(void **tab)$/;"	f
 ft_tabintcpy	srcs/tab/ft_tabintcpy.c	/^int			**ft_tabintcpy(int **array, size_t width)$/;"	f
