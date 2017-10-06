@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   ft_bzerotab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/16 18:44:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 17:58:49 by psebasti         ###   ########.fr       */
+/*   Created: 2017/10/06 18:09:30 by psebasti          #+#    #+#             */
+/*   Updated: 2017/10/06 18:11:24 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-void	ft_tabfree(void **tab)
+void		ft_bzerotab(void **tab)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	if (tab == NULL)
-		return ;
-	while (tab[i])
+	if (tab)
 	{
-		printf("free %d %p\n", i , &tab[i]);
-		free(tab[i]);
-		i++;
+		while (tab[i])
+		{
+			tab[i] = NULL;
+			i++;
+		}
 	}
-	printf("free tab %p\n", tab);
-	free(tab);
 }

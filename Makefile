@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/06 14:35:53 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/06 18:15:07 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -33,6 +33,7 @@ FDPATH = fd/
 
 SRC		=	$(MEMPATH)ft_memset.c\
 			$(MEMPATH)ft_bzero.c\
+			$(MEMPATH)ft_bzerotab.c\
 			$(MEMPATH)ft_memcpy.c\
 			$(MEMPATH)ft_memccpy.c\
 			$(MEMPATH)ft_memmove.c\

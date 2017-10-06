@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 14:34:56 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/06 18:14:51 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,7 @@ void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 void			ft_bzero(void *s, size_t n);
+void			ft_bzerotab(void **tab);
 void			*ft_memdup(const void *mem, size_t size);
 
 t_list			*ft_lstnew(void const *content, size_t content_size);
