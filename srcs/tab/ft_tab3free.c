@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/06 13:13:00 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 13:23:59 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/06 19:32:06 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void	ft_tab3free(void ***tab)
 	while (tab[i])
 	{
 		j = 0;
-		while(tab[i][j])
+		while (tab[i][j])
 		{
 			free(tab[i][j]);
-				j++;
+			j++;
 		}
 		free(tab[i]);
 		i++;
