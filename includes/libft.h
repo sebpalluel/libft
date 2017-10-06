@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 13:15:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/06 14:34:56 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,5 +182,6 @@ uintmax_t		ft_random(uintmax_t min, uintmax_t max, uintmax_t res);
 size_t			ft_create_file(t_fd *fd, int chmod);
 size_t			ft_open(t_fd *fd, int flags, int rights);
 int				ft_close(t_fd *fd);
+void			ft_fd_delete(t_fd *fd);
 
 #endif

@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/06 13:18:07 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/06 14:35:53 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -173,6 +173,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(FDPATH)ft_create_file.c\
 			$(FDPATH)ft_open.c\
 			$(FDPATH)ft_close.c\
+			$(FDPATH)ft_fd_delete.c\
 
 .PHONY: all build clean fclean re
 

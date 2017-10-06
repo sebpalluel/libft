@@ -184,6 +184,7 @@ ft_colornew	srcs/gfx/ft_colornew.c	/^t_color			*ft_colornew(unsigned char r, uns
 ft_colorparse	srcs/gfx/ft_colorparse.c	/^t_color		*ft_colorparse(char *arg)$/;"	f
 ft_colortohex	srcs/gfx/ft_colortohex.c	/^int			ft_colortohex(t_color *col)$/;"	f
 ft_create_file	srcs/fd/ft_create_file.c	/^size_t		ft_create_file(t_fd *fd, int chmod)$/;"	f
+ft_fd_delete	srcs/fd/ft_fd_delete.c	/^void		ft_fd_delete(t_fd *fd)$/;"	f
 ft_flipcolumn	srcs/tab/ft_v_flip.c	/^static void	ft_flipcolumn(void **array, size_t column, size_t rows,\\$/;"	f	file:
 ft_fliprow	srcs/tab/ft_h_flip.c	/^static void	ft_fliprow(void *row, size_t columns, size_t nbytes)$/;"	f	file:
 ft_ftoa	srcs/stdlib/ft_ftoa.c	/^char		*ft_ftoa(float f)$/;"	f
