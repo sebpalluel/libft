@@ -6,12 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/16 18:51:11 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/03 19:47:34 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/06 18:46:22 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 uintmax_t		ft_randint(size_t length)
 {

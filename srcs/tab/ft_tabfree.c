@@ -6,12 +6,11 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/16 18:44:35 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 17:58:49 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/06 18:42:32 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
 void	ft_tabfree(void **tab)
 {
@@ -22,10 +21,8 @@ void	ft_tabfree(void **tab)
 		return ;
 	while (tab[i])
 	{
-		printf("free %d %p\n", i , &tab[i]);
 		free(tab[i]);
 		i++;
 	}
-	printf("free tab %p\n", tab);
 	free(tab);
 }
