@@ -225,14 +225,14 @@ ft_lstlen	srcs/list/ft_lstlen.c	/^int		ft_lstlen(t_list *lst)$/;"	f
 ft_lstmap	srcs/list/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f
 ft_lstnew	srcs/list/ft_lstnew.c	/^t_list		*ft_lstnew(void const *content, size_t content_size)$/;"	f
 ft_lsttoarray	srcs/list/ft_lsttoarray.c	/^void	**ft_lsttoarray(t_list *lst)$/;"	f
-ft_matrixadd	srcs/gfx/ft_matrixadd.c	/^void		ft_matrixadd(double **ret, double **m, double **n, int size)$/;"	f
-ft_matrixhomothety	srcs/gfx/ft_matrixhomothety.c	/^void		ft_matrixhomothety(double **ret, int factor)$/;"	f
-ft_matrixmult	srcs/gfx/ft_matrixmult.c	/^void		ft_matrixmult(double **ret, double **m, double **n, int size)$/;"	f
-ft_matrixonpoint	srcs/gfx/ft_matrixonpoint.c	/^void		ft_matrixonpoint(double **m, t_vec3 *vec3)$/;"	f
-ft_matrixrotx	srcs/gfx/ft_matrixrotx.c	/^void		ft_matrixrotx(double **ret, double deg)$/;"	f
-ft_matrixroty	srcs/gfx/ft_matrixroty.c	/^void		ft_matrixroty(double **ret, double deg)$/;"	f
-ft_matrixrotz	srcs/gfx/ft_matrixrotz.c	/^void		ft_matrixrotz(double **ret, double deg)$/;"	f
-ft_matrixtranslate	srcs/gfx/ft_matrixtranslate.c	/^void		ft_matrixtranslate(double **ret, t_vec3 *vec)$/;"	f
+ft_matrixadd	srcs/gfx/ft_matrixadd.c	/^void		ft_matrixadd(double **mat, double **m, double **n, int size)$/;"	f
+ft_matrixhomothety	srcs/gfx/ft_matrixhomothety.c	/^void		ft_matrixhomothety(double **mat, int factor)$/;"	f
+ft_matrixmult	srcs/gfx/ft_matrixmult.c	/^void		ft_matrixmult(double **mat, double **m, double **n, int size)$/;"	f
+ft_matrixonpoint	srcs/gfx/ft_matrixonpoint.c	/^void		ft_matrixonpoint(double **mat, t_vec3 *vec3)$/;"	f
+ft_matrixrotx	srcs/gfx/ft_matrixrotx.c	/^void		ft_matrixrotx(double **mat, double deg)$/;"	f
+ft_matrixroty	srcs/gfx/ft_matrixroty.c	/^void		ft_matrixroty(double **mat, double deg)$/;"	f
+ft_matrixrotz	srcs/gfx/ft_matrixrotz.c	/^void		ft_matrixrotz(double **mat, double deg)$/;"	f
+ft_matrixtranslate	srcs/gfx/ft_matrixtranslate.c	/^void		ft_matrixtranslate(double **mat, t_vec3 *vec)$/;"	f
 ft_matrixzero	srcs/gfx/ft_matrixzero.c	/^double		**ft_matrixzero(int size)$/;"	f
 ft_memalloc	srcs/mem/ft_memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f
 ft_memccpy	srcs/mem/ft_memccpy.c	/^void	*ft_memccpy(void *dest, const void *src, int c, size_t n)$/;"	f
@@ -271,6 +271,7 @@ ft_putstr_fd	srcs/put/ft_putstr_fd.c	/^void	ft_putstr_fd(char const *s, int fd)$
 ft_rand	srcs/rand/ft_rand.c	/^uintmax_t		ft_rand(void)$/;"	f
 ft_randint	srcs/rand/ft_randint.c	/^uintmax_t		ft_randint(size_t length)$/;"	f
 ft_random	srcs/rand/ft_random.c	/^uintmax_t	ft_random(uintmax_t min, uintmax_t max, uintmax_t res)$/;"	f
+ft_range_num	srcs/math/ft_range_num.c	/^double 		ft_range_num(double input, double i[2], double o[2])$/;"	f
 ft_rol	srcs/rand/ft_rol.c	/^unsigned int	ft_rol(const unsigned int value, int shift)$/;"	f
 ft_ror	srcs/rand/ft_ror.c	/^unsigned int	ft_ror(const unsigned int value, int shift)$/;"	f
 ft_specialchar	srcs/gfx/ft_mlx_printkeytochar.c	/^static char	ft_specialchar(int keycode)$/;"	f	file:

@@ -6,22 +6,22 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 13:43:04 by psebasti          #+#    #+#             */
-/*   Updated: 2017/04/11 13:44:42 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/09 17:16:44 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_matrixtranslate(double **ret, t_vec3 *vec)
+void		ft_matrixtranslate(double **mat, t_vec3 *vec)
 {
-	if (ret && vec)
+	if (mat && vec)
 	{
-		ret[0][0] = 1;
-		ret[1][1] = 1;
-		ret[2][2] = 1;
-		ret[3][3] = 1;
-		ret[0][3] = vec->x;
-		ret[1][3] = vec->y;
-		ret[2][3] = vec->z;
+		mat[0][0] = 1;
+		mat[1][1] = 1;
+		mat[2][2] = 1;
+		mat[3][3] = 1;
+		mat[0][3] = vec->x;
+		mat[1][3] = vec->y;
+		mat[2][3] = vec->z;
 	}
 }

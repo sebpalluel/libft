@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matrixrotz.c                                    :+:      :+:    :+:   */
+/*   ft_range_num.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/11 13:48:41 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/09 15:34:45 by psebasti         ###   ########.fr       */
+/*   Created: 2017/10/12 14:55:30 by psebasti          #+#    #+#             */
+/*   Updated: 2017/10/12 14:57:18 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_matrixrotz(double **mat, double deg)
+double 		ft_range_num(double input, double i[2], double o[2])
 {
-	double	c;
-	double	s;
+	double	slope;
+	double	output;
 
-	c = cos(deg);
-	s = sin(deg);
-	if (mat)
-	{
-		mat[3][3] = 1;
-		mat[2][2] = 1;
-		mat[0][0] = c;
-		mat[0][1] = -s;
-		mat[1][0] = s;
-		mat[1][1] = c;
-	}
+	slope = 1.0 * (o[1] - o[0]) / (i[1] - i[0]);
+	output = o[0] + slope * (input - i[0]);
+	return (output);
 }
+

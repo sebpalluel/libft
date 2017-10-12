@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 18:14:51 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/12 14:56:45 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ void			ft_imgdel(t_img *img, void *mlx);
 t_img			*ft_imgnew(void *mlx, size_t x, size_t y);
 t_img			*ft_xmpnew(void *mlx, char *xmp, size_t x, size_t y);
 t_mlx			*ft_initwindow(char *name, size_t width, size_t height);
-void			ft_matrixadd(double **ret, double **m, double **n, int size);
-void			ft_matrixhomothety(double **ret, int factor);
-void			ft_matrixmult(double **ret, double **m, double **n, int size);
-void			ft_matrixonpoint(double **m, t_vec3 *vec3);
-void			ft_matrixrotx(double **ret, double deg);
-void			ft_matrixroty(double **ret, double deg);
-void			ft_matrixrotz(double **ret, double deg);
-void			ft_matrixtranslate(double **ret, t_vec3 *vec);
+void			ft_matrixadd(double **mat, double **m, double **n, int size);
+void			ft_matrixhomothety(double **mat, int factor);
+void			ft_matrixmult(double **mat, double **m, double **n, int size);
+void			ft_matrixonpoint(double **mat, t_vec3 *vec3);
+void			ft_matrixrotx(double **mat, double deg);
+void			ft_matrixroty(double **mat, double deg);
+void			ft_matrixrotz(double **mat, double deg);
+void			ft_matrixtranslate(double **mat, t_vec3 *vec);
 double			**ft_matrixzero(int size);
 void			ft_pixcpy(t_pix *pix_from, t_pix *pix_to);
 t_pix			*ft_pixnew(int x, int y, int z);
@@ -91,6 +91,7 @@ char			*ft_itoa(int n);
 char			*ft_ftoa(float f);
 int				ft_sqrt(int nb);
 int				ft_pow(int n, int p);
+double 			ft_range_num(double input, double i[2], double o[2]);
 
 size_t			ft_tablen(char **tab);
 int				ft_tabdepth(void **tab);
