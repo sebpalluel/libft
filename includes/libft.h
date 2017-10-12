@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/12 14:56:45 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/12 15:05:39 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char			*ft_itoa(int n);
 char			*ft_ftoa(float f);
 int				ft_sqrt(int nb);
 int				ft_pow(int n, int p);
-double 			ft_range_num(double input, double i[2], double o[2]);
+double			ft_range_num(double input, double i[2], double o[2]);
 
 size_t			ft_tablen(char **tab);
 int				ft_tabdepth(void **tab);
