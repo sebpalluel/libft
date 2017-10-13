@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/23 14:46:00 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/03 14:20:21 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/13 15:24:25 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static int			copy_buff(t_str **buffer, char *src)
 		src++;
 	}
 	current = *buffer;
-	while (current->next)
+	while (current && current->next)
 		current = current->next;
 	while (*src)
 	{
