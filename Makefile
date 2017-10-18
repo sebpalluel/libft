@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/18 18:26:23 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/18 18:45:51 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -128,8 +128,10 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(LISTPATH)ft_lstmap.c\
 			$(LISTPATH)ft_lstlen.c\
 			$(LISTPATH)ft_lstaddend.c\
+			$(LISTPATH)ft_lstaddfront.c\
 			$(LISTPATH)ft_lstfree.c\
 			$(LISTPATH)ft_lstpushback.c\
+			$(LISTPATH)ft_lstpushfront.c\
 			$(LISTPATH)ft_lstaddback.c\
 			$(PERSOPATH)get_next_line.c\
 			$(PERSOPATH)ft_swap.c\
