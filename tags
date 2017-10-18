@@ -224,6 +224,7 @@ ft_itoa	srcs/stdlib/ft_itoa.c	/^char			*ft_itoa(int n)$/;"	f
 ft_letters	srcs/str/ft_strsplit.c	/^static unsigned int		ft_letters(char const *s, char c, int i)$/;"	f	file:
 ft_lines	srcs/str/ft_strsplit.c	/^static unsigned int		ft_lines(char const *s, char c)$/;"	f	file:
 ft_lstadd	srcs/list/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
+ft_lstaddback	srcs/list/ft_lstaddback.c	/^void		ft_lstaddback(t_list **alst, t_list *new)$/;"	f
 ft_lstaddend	srcs/list/ft_lstaddend.c	/^void	ft_lstaddend(t_list **alst, t_list *new)$/;"	f
 ft_lstdel	srcs/list/ft_lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f
 ft_lstdelone	srcs/list/ft_lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))$/;"	f
@@ -232,6 +233,7 @@ ft_lstiter	srcs/list/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_lis
 ft_lstlen	srcs/list/ft_lstlen.c	/^int		ft_lstlen(t_list *lst)$/;"	f
 ft_lstmap	srcs/list/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f
 ft_lstnew	srcs/list/ft_lstnew.c	/^t_list		*ft_lstnew(void const *content, size_t content_size)$/;"	f
+ft_lstpushback	srcs/list/ft_lstpushback.c	/^t_list		*ft_lstpushback(t_list **alst, void *data, size_t content_size)$/;"	f
 ft_lsttoarray	srcs/list/ft_lsttoarray.c	/^void	**ft_lsttoarray(t_list *lst)$/;"	f
 ft_matrixadd	srcs/gfx/ft_matrixadd.c	/^void		ft_matrixadd(double **mat, double **m, double **n, int size)$/;"	f
 ft_matrixhomothety	srcs/gfx/ft_matrixhomothety.c	/^void		ft_matrixhomothety(double **mat, int factor)$/;"	f
