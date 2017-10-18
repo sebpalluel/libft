@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/12 12:04:30 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/18 14:44:43 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,5 +122,11 @@
 # define ANSI_COLOR_MAGENTA			"\x1b[35m"
 # define ANSI_COLOR_CYAN			"\x1b[36m"
 # define ANSI_COLOR_RESET			"\x1b[0m"
+
+# define ANSI_NORMAL				"\e[0m"
+# define ANSI_BOLD					"\e[1m"
+# define ANSI_UNDERLINED			"\e[4m"
+# define ANSI_BLINK					"\e[5m"
+# define ANSI_BLACK					"\e[30m"
 
 #endif
