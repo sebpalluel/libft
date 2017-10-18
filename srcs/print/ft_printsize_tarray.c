@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 18:59:32 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/02 19:24:18 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/18 16:43:31 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ void		ft_printsize_tarray(size_t **map, size_t width, size_t height)
 			if (j > 0)
 				ft_putchar(' ');
 			if (map[i][j] == 1)
-				ft_putstr(ANSI_COLOR_RED);
+				ft_putstr(ANSI_RED);
 			else if (map[i][j] == 2)
-				ft_putstr(ANSI_COLOR_CYAN);
+				ft_putstr(ANSI_CYAN);
 			else
-				ft_putstr(ANSI_COLOR_GREEN);
+				ft_putstr(ANSI_GREEN);
 			ft_putnbr(map[i][j]);
 			j++;
 		}
 		ft_putchar('\n');
-		ft_putstr(ANSI_COLOR_RESET);
+		ft_putstr(ANSI_RESET);
 		i++;
 	}
 }

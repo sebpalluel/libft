@@ -310,6 +310,7 @@ ft_strnequ	srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char const *s
 ft_strnew	srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
 ft_strnjoin	srcs/str/ft_strnjoin.c	/^char		*ft_strnjoin(char const *s1, char const *s2, size_t len)$/;"	f
 ft_strnstr	srcs/str/ft_strnstr.c	/^char		*ft_strnstr(const char *str, const char *tofind, size_t n)$/;"	f
+ft_stroneof	srcs/str/ft_stroneof.c	/^int		ft_stroneof(char c, char *str)$/;"	f
 ft_strrchr	srcs/str/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int c)$/;"	f
 ft_strsplit	srcs/str/ft_strsplit.c	/^char					**ft_strsplit(char const *s, char c)$/;"	f
 ft_strstr	srcs/str/ft_strstr.c	/^char		*ft_strstr(const char *str, const char *tofind)$/;"	f
