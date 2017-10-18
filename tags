@@ -172,6 +172,7 @@ font_atlas	minilibx/font.c	/^} font_atlas = {$/;"	v	typeref:struct:__anon1	file:
 font_fshader	minilibx/mlx_int.h	/^  GLuint	font_fshader;$/;"	m	struct:glsl_info_s
 font_program	minilibx/mlx_int.h	/^  GLuint	font_program;$/;"	m	struct:glsl_info_s
 font_vshader	minilibx/mlx_int.h	/^  GLuint	font_vshader;$/;"	m	struct:glsl_info_s
+ft_abs	srcs/math/ft_abs.c	/^int		ft_abs(int a)$/;"	f
 ft_atoi	srcs/stdlib/ft_atoi.c	/^int		ft_atoi(const char *str)$/;"	f
 ft_bzero	srcs/mem/ft_bzero.c	/^void		ft_bzero(void *s, size_t n)$/;"	f
 ft_bzerotab	srcs/mem/ft_bzerotab.c	/^void		ft_bzerotab(void **tab)$/;"	f
