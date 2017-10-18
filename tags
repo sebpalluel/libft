@@ -262,6 +262,7 @@ ft_mlx_keytonumchar	srcs/gfx/ft_mlx_keytonumchar.c	/^char		ft_mlx_keytonumchar(i
 ft_mlx_printkeytochar	srcs/gfx/ft_mlx_printkeytochar.c	/^char		ft_mlx_printkeytochar(int keycode)$/;"	f
 ft_mlxdelete	srcs/gfx/ft_mlxdelete.c	/^void		ft_mlxdelete(t_mlx *mlx, t_img *img)$/;"	f
 ft_open	srcs/fd/ft_open.c	/^size_t		ft_open(t_fd *fd, int flags, int rights)$/;"	f
+ft_perror	srcs/perso/ft_perror.c	/^void	ft_perror(char *name, char *error, int exit_f)$/;"	f
 ft_pixcpy	srcs/gfx/ft_pixcpy.c	/^void		ft_pixcpy(t_pix *pix_from, t_pix *pix_to)$/;"	f
 ft_pixnew	srcs/gfx/ft_pixnew.c	/^t_pix		*ft_pixnew(int x, int y, int z)$/;"	f
 ft_pixpopulate	srcs/gfx/ft_pixpopulate.c	/^void	ft_pixpopulate(t_pix *to_pix, int x, int y, int z)$/;"	f
