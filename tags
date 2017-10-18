@@ -4,13 +4,20 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ANSI_COLOR_BLUE	includes/libft_define.h	/^# define ANSI_COLOR_BLUE	/;"	d
-ANSI_COLOR_CYAN	includes/libft_define.h	/^# define ANSI_COLOR_CYAN	/;"	d
-ANSI_COLOR_GREEN	includes/libft_define.h	/^# define ANSI_COLOR_GREEN	/;"	d
-ANSI_COLOR_MAGENTA	includes/libft_define.h	/^# define ANSI_COLOR_MAGENTA	/;"	d
-ANSI_COLOR_RED	includes/libft_define.h	/^# define ANSI_COLOR_RED	/;"	d
-ANSI_COLOR_RESET	includes/libft_define.h	/^# define ANSI_COLOR_RESET	/;"	d
-ANSI_COLOR_YELLOW	includes/libft_define.h	/^# define ANSI_COLOR_YELLOW	/;"	d
+ANSI_BLACK	includes/libft_define.h	/^# define ANSI_BLACK	/;"	d
+ANSI_BLINK	includes/libft_define.h	/^# define ANSI_BLINK	/;"	d
+ANSI_BLUE	includes/libft_define.h	/^# define ANSI_BLUE	/;"	d
+ANSI_BOLD	includes/libft_define.h	/^# define ANSI_BOLD	/;"	d
+ANSI_CYAN	includes/libft_define.h	/^# define ANSI_CYAN	/;"	d
+ANSI_GREEN	includes/libft_define.h	/^# define ANSI_GREEN	/;"	d
+ANSI_MAGENTA	includes/libft_define.h	/^# define ANSI_MAGENTA	/;"	d
+ANSI_MATRIX	includes/libft_define.h	/^# define ANSI_MATRIX	/;"	d
+ANSI_NORMAL	includes/libft_define.h	/^# define ANSI_NORMAL	/;"	d
+ANSI_RED	includes/libft_define.h	/^# define ANSI_RED	/;"	d
+ANSI_RESET	includes/libft_define.h	/^# define ANSI_RESET	/;"	d
+ANSI_UNDERLINED	includes/libft_define.h	/^# define ANSI_UNDERLINED	/;"	d
+ANSI_WHITE	includes/libft_define.h	/^# define ANSI_WHITE	/;"	d
+ANSI_YELLOW	includes/libft_define.h	/^# define ANSI_YELLOW	/;"	d
 A_KEY	includes/libft_define.h	/^# define A_KEY	/;"	d
 BUFF_SIZE	includes/libft_define.h	/^# define BUFF_SIZE /;"	d
 BUTTON1MOTIONMASK	includes/libft_define.h	/^# define BUTTON1MOTIONMASK	/;"	d
@@ -299,6 +306,7 @@ ft_strncmp	srcs/str/ft_strncmp.c	/^size_t		ft_strncmp(const char *s1, const char
 ft_strncpy	srcs/str/ft_strncpy.c	/^char	*ft_strncpy(char *dest, const char *src, size_t n)$/;"	f
 ft_strnequ	srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
 ft_strnew	srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
+ft_strnjoin	srcs/str/ft_strnjoin.c	/^char		*ft_strnjoin(char const *s1, char const *s2, size_t len)$/;"	f
 ft_strnstr	srcs/str/ft_strnstr.c	/^char		*ft_strnstr(const char *str, const char *tofind, size_t n)$/;"	f
 ft_strrchr	srcs/str/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int c)$/;"	f
 ft_strsplit	srcs/str/ft_strsplit.c	/^char					**ft_strsplit(char const *s, char c)$/;"	f
