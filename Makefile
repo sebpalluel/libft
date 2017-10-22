@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/18 18:45:51 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/19 21:41:16 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -190,7 +190,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 OBJS 	=	$(SRCS:.c=.o)
 
 CMP		=	gcc
-FLAGS	=	-ggdb -Wall -Wextra -Werror
+DEBUG	=	-g3 -fsanitize=address
+FLAGS	=	-g3 -Wall -Wextra -Werror
 MLX		=	-L minilibx/ -lmlx -framework OpenGL -framework AppKit
 
 SRC := $(filter $(addprefix %, .c), $(SRC))

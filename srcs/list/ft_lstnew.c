@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 16:11:53 by psebasti          #+#    #+#             */
-/*   Updated: 2016/11/19 18:24:07 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/19 21:49:03 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 
 	if (!(list = (t_list*)malloc(sizeof(*list))))
 		return (NULL);
+	ft_bzero(list, sizeof(t_list));
 	if (!content)
 	{
 		list->content = NULL;
