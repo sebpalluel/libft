@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/18 18:47:11 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 17:54:50 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,6 @@ t_list			*ft_lstpushback(t_list **alst, void *data, size_t content_size);
 t_list			*ft_lstpushfront(t_list **alst, void *data, \
 		size_t content_size);
 void			ft_lstaddback(t_list **alst, t_list *new);
-
 
 void			ft_printfloatmatrix(float **mat, size_t size);
 void			ft_printintarray(int **map, size_t width, size_t height);
