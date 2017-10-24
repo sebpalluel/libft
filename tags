@@ -43,7 +43,8 @@ COLORMAPCHANGEMASK	includes/libft_define.h	/^# define COLORMAPCHANGEMASK	/;"	d
 CTRL	includes/libft_define.h	/^# define CTRL	/;"	d
 CTYPEPATH	Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	includes/libft_define.h	/^# define C_KEY	/;"	d
-DEBUG	Makefile	/^DEBUG	=	-g3 -fsanitize=address$/;"	m
+DEBC	Makefile	/^DEBC		=	\\033[36m$/;"	m
+DEBUG_F	Makefile	/^DEBUG_F	=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	includes/libft_define.h	/^# define DOWN	/;"	d
 D_KEY	includes/libft_define.h	/^# define D_KEY	/;"	d
@@ -51,15 +52,17 @@ EIGHT	includes/libft_define.h	/^# define EIGHT	/;"	d
 ENTER	includes/libft_define.h	/^# define ENTER	/;"	d
 ENTERWINDOWMASK	includes/libft_define.h	/^# define ENTERWINDOWMASK	/;"	d
 EQUAL	includes/libft_define.h	/^# define EQUAL	/;"	d
+ERC	Makefile	/^ERC			=	\\033[31m$/;"	m
 ERROR	includes/libft_define.h	/^# define ERROR	/;"	d
 ESC	includes/libft_define.h	/^# define ESC	/;"	d
 EXPOSE	includes/libft_define.h	/^# define EXPOSE	/;"	d
 EXPOSUREMASK	includes/libft_define.h	/^# define EXPOSUREMASK	/;"	d
+EXT	Makefile	/^EXT		=	Makefile$/;"	m
 E_KEY	includes/libft_define.h	/^# define E_KEY	/;"	d
 FDPATH	Makefile	/^FDPATH = fd\/$/;"	m
 FD_MAX	includes/libft_define.h	/^# define FD_MAX	/;"	d
 FIVE	includes/libft_define.h	/^# define FIVE	/;"	d
-FLAGS	Makefile	/^FLAGS	=	-g3 -Wall -Wextra -Werror$/;"	m
+FLAGS	Makefile	/^FLAGS	=	-Wall -Wextra -Werror$/;"	m
 FOCUSCHANGEMASK	includes/libft_define.h	/^# define FOCUSCHANGEMASK	/;"	d
 FONT_HEIGHT	minilibx/mlx_int.h	/^#define	FONT_HEIGHT	/;"	d
 FONT_WIDTH	minilibx/mlx_int.h	/^#define FONT_WIDTH	/;"	d
@@ -103,6 +106,7 @@ MOUSE_SIDE	includes/libft_define.h	/^# define MOUSE_SIDE	/;"	d
 M_KEY	includes/libft_define.h	/^# define M_KEY	/;"	d
 NAME	Makefile	/^NAME	=	libft.a$/;"	m
 NINE	includes/libft_define.h	/^# define NINE	/;"	d
+NOC	Makefile	/^NOC			=	\\033[0m$/;"	m
 NOEVENTMASK	includes/libft_define.h	/^# define NOEVENTMASK	/;"	d
 NOM	minilibx/Makefile	/^NOM=libmlx.a$/;"	m
 NOTIFY	includes/libft_define.h	/^# define NOTIFY	/;"	d
@@ -114,6 +118,7 @@ OBJS	Makefile	/^OBJS 	=	$(SRCS:.c=.o)$/;"	m
 OBJS	Makefile	/^OBJS = $(addprefix $(OBJDIR), $(addsuffix .o, $(basename $(SRC))))$/;"	m
 OBJS_DIRS	Makefile	/^OBJS_DIRS = $(sort $(dir $(OBJS)))$/;"	m
 OK	includes/libft_define.h	/^# define OK	/;"	d
+OKC	Makefile	/^OKC			=	\\033[32m$/;"	m
 ONE	includes/libft_define.h	/^# define ONE	/;"	d
 OWNERGRABBUTTONMASK	includes/libft_define.h	/^# define OWNERGRABBUTTONMASK	/;"	d
 O_KEY	includes/libft_define.h	/^# define O_KEY	/;"	d
@@ -158,6 +163,7 @@ UP	includes/libft_define.h	/^# define UP	/;"	d
 U_KEY	includes/libft_define.h	/^# define U_KEY	/;"	d
 VISIBILITYCHANGEMASK	includes/libft_define.h	/^# define VISIBILITYCHANGEMASK	/;"	d
 V_KEY	includes/libft_define.h	/^# define V_KEY	/;"	d
+WAC	Makefile	/^WAC			=	\\033[33m$/;"	m
 WHEEL_DOWN	includes/libft_define.h	/^# define WHEEL_DOWN	/;"	d
 WHEEL_UP	includes/libft_define.h	/^# define WHEEL_UP	/;"	d
 W_KEY	includes/libft_define.h	/^# define W_KEY	/;"	d

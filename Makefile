@@ -6,11 +6,17 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/19 21:41:16 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/10/24 14:59:44 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
 NAME	=	libft.a
+
+NOC			=	\033[0m
+DEBC		=	\033[36m
+OKC			=	\033[32m
+ERC			=	\033[31m
+WAC			=	\033[33m
 
 SRCDIR = ./srcs/
 OBJDIR = ./objs/
@@ -190,8 +196,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 OBJS 	=	$(SRCS:.c=.o)
 
 CMP		=	gcc
-DEBUG	=	-g3 -fsanitize=address
-FLAGS	=	-g3 -Wall -Wextra -Werror
+FLAGS	=	-Wall -Wextra -Werror
+DEBUG_F	=	-g3 -fsanitize=address
 MLX		=	-L minilibx/ -lmlx -framework OpenGL -framework AppKit
 
 SRC := $(filter $(addprefix %, .c), $(SRC))
@@ -202,29 +208,39 @@ OBJS_DIRS = $(sort $(dir $(OBJS)))
 INCS_DIRS = $(addsuffix /, $(INCDIR))
 INCS = $(addprefix -I, $(INCS_DIRS))
 
-all: $(NAME)
+EXT		=	Makefile
+
+debug: all
+
+all: $(NAME) $(EXT)
 
 $(NAME): build $(LIBS) $(OBJS)
+ifneq (,$(filter debug,$(MAKECMDGOALS)))
+	@echo "$(DEBC)$(NAME):\t$(NAME) DEBUG MODE$(NOC)"
+endif
 	@ar rc $(NAME) $(OBJS)
 	@ranlib $(NAME)
-	@echo "libft building finished"
+	@echo "\n$(OKC)$(NAME):\t$(NAME) READY$(NOC)"
 
 build:
-	@echo "building libft"
 	@mkdir -p $(OBJDIR)
 	@mkdir -p $(OBJS_DIRS)
 
 clean:
-	@echo "cleaning libft"
 	@rm -f $(LIBS)
 	@rm -rf $(OBJDIR)
-	@echo "libft cleaning finished"
-
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
 
+
 $(OBJDIR)%.o: $(SRCDIR)%.c
+ifneq (,$(filter debug,$(MAKECMDGOALS)))
+	@$(CC) -c -o $@ $< $(INCS) $(FLAGS) $(DEBUG_F)
+	@echo -n .
+else
 	@$(CC) -c -o $@ $< $(INCS) $(FLAGS)
+	@echo -n .
+endif
