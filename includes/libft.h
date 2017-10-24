@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 18:05:00 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 18:07:42 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # include <fcntl.h>
 # include <limits.h>
 # include <time.h>
-# include "../minilibx/mlx.h"
+# include "../../minilibx/mlx.h"
 # include "libft_struct.h"
 # include "libft_define.h"
 

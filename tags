@@ -45,6 +45,7 @@ CTYPEPATH	Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	includes/libft_define.h	/^# define C_KEY	/;"	d
 DEBC	Makefile	/^DEBC		=	\\033[36m$/;"	m
 DEBUG_F	Makefile	/^DEBUG_F	=	-g3 -fsanitize=address$/;"	m
+DESTROYNOTIFY	includes/libft_define.h	/^# define DESTROYNOTIFY	/;"	d
 DOT_KEY	includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	includes/libft_define.h	/^# define DOWN	/;"	d
 D_KEY	includes/libft_define.h	/^# define D_KEY	/;"	d

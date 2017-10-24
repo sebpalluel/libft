@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/01 18:47:08 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/19 17:46:18 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/24 18:09:15 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@
 # define BUTTONRELEASE				5
 # define NOTIFY						6
 # define EXPOSE						12
+# define DESTROYNOTIFY				17
 
 # define NOEVENTMASK				0L
 # define KEYPRESSMASK				(1L<<0)
