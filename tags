@@ -9,10 +9,17 @@ ANSI_BLINK	includes/libft_define.h	/^# define ANSI_BLINK	/;"	d
 ANSI_BLUE	includes/libft_define.h	/^# define ANSI_BLUE	/;"	d
 ANSI_BOLD	includes/libft_define.h	/^# define ANSI_BOLD	/;"	d
 ANSI_CYAN	includes/libft_define.h	/^# define ANSI_CYAN	/;"	d
+ANSI_DARK_GRAY	includes/libft_define.h	/^# define ANSI_DARK_GRAY	/;"	d
 ANSI_GREEN	includes/libft_define.h	/^# define ANSI_GREEN	/;"	d
+ANSI_LIGHT_BLUE	includes/libft_define.h	/^# define ANSI_LIGHT_BLUE	/;"	d
+ANSI_LIGHT_CYAN	includes/libft_define.h	/^# define ANSI_LIGHT_CYAN	/;"	d
+ANSI_LIGHT_GRAY	includes/libft_define.h	/^# define ANSI_LIGHT_GRAY	/;"	d
+ANSI_LIGHT_GREEN	includes/libft_define.h	/^# define ANSI_LIGHT_GREEN	/;"	d
+ANSI_LIGHT_MAGENTA	includes/libft_define.h	/^# define ANSI_LIGHT_MAGENTA	/;"	d
+ANSI_LIGHT_RED	includes/libft_define.h	/^# define ANSI_LIGHT_RED	/;"	d
+ANSI_LIGHT_YELLOW	includes/libft_define.h	/^# define ANSI_LIGHT_YELLOW	/;"	d
 ANSI_MAGENTA	includes/libft_define.h	/^# define ANSI_MAGENTA	/;"	d
 ANSI_MATRIX	includes/libft_define.h	/^# define ANSI_MATRIX	/;"	d
-ANSI_NORMAL	includes/libft_define.h	/^# define ANSI_NORMAL	/;"	d
 ANSI_RED	includes/libft_define.h	/^# define ANSI_RED	/;"	d
 ANSI_RESET	includes/libft_define.h	/^# define ANSI_RESET	/;"	d
 ANSI_UNDERLINED	includes/libft_define.h	/^# define ANSI_UNDERLINED	/;"	d
@@ -36,6 +43,8 @@ COLORMAPCHANGEMASK	includes/libft_define.h	/^# define COLORMAPCHANGEMASK	/;"	d
 CTRL	includes/libft_define.h	/^# define CTRL	/;"	d
 CTYPEPATH	Makefile	/^CTYPEPATH = ctype\/$/;"	m
 C_KEY	includes/libft_define.h	/^# define C_KEY	/;"	d
+DEBC	Makefile	/^DEBC		=	\\033[36m$/;"	m
+DEBUG_F	Makefile	/^DEBUG_F	=	-g3 -fsanitize=address$/;"	m
 DOT_KEY	includes/libft_define.h	/^# define DOT_KEY	/;"	d
 DOWN	includes/libft_define.h	/^# define DOWN	/;"	d
 D_KEY	includes/libft_define.h	/^# define D_KEY	/;"	d
@@ -43,15 +52,17 @@ EIGHT	includes/libft_define.h	/^# define EIGHT	/;"	d
 ENTER	includes/libft_define.h	/^# define ENTER	/;"	d
 ENTERWINDOWMASK	includes/libft_define.h	/^# define ENTERWINDOWMASK	/;"	d
 EQUAL	includes/libft_define.h	/^# define EQUAL	/;"	d
+ERC	Makefile	/^ERC			=	\\033[31m$/;"	m
 ERROR	includes/libft_define.h	/^# define ERROR	/;"	d
 ESC	includes/libft_define.h	/^# define ESC	/;"	d
 EXPOSE	includes/libft_define.h	/^# define EXPOSE	/;"	d
 EXPOSUREMASK	includes/libft_define.h	/^# define EXPOSUREMASK	/;"	d
+EXT	Makefile	/^EXT		=	Makefile$/;"	m
 E_KEY	includes/libft_define.h	/^# define E_KEY	/;"	d
 FDPATH	Makefile	/^FDPATH = fd\/$/;"	m
 FD_MAX	includes/libft_define.h	/^# define FD_MAX	/;"	d
 FIVE	includes/libft_define.h	/^# define FIVE	/;"	d
-FLAGS	Makefile	/^FLAGS	=	-ggdb -Wall -Wextra -Werror$/;"	m
+FLAGS	Makefile	/^FLAGS	=	-Wall -Wextra -Werror$/;"	m
 FOCUSCHANGEMASK	includes/libft_define.h	/^# define FOCUSCHANGEMASK	/;"	d
 FOUR	includes/libft_define.h	/^# define FOUR	/;"	d
 F_KEY	includes/libft_define.h	/^# define F_KEY	/;"	d
@@ -83,13 +94,13 @@ MAX_INT_DECIMAL	includes/libft_define.h	/^# define MAX_INT_DECIMAL	/;"	d
 MEMPATH	Makefile	/^MEMPATH = mem\/$/;"	m
 MINUS	includes/libft_define.h	/^# define MINUS	/;"	d
 MIN_INT	includes/libft_define.h	/^# define MIN_INT	/;"	d
-MLX	Makefile	/^MLX		=	-L minilibx\/ -lmlx -framework OpenGL -framework AppKit$/;"	m
 MOUSE_LEFT	includes/libft_define.h	/^# define MOUSE_LEFT	/;"	d
 MOUSE_RIGHT	includes/libft_define.h	/^# define MOUSE_RIGHT	/;"	d
 MOUSE_SIDE	includes/libft_define.h	/^# define MOUSE_SIDE	/;"	d
 M_KEY	includes/libft_define.h	/^# define M_KEY	/;"	d
 NAME	Makefile	/^NAME	=	libft.a$/;"	m
 NINE	includes/libft_define.h	/^# define NINE	/;"	d
+NOC	Makefile	/^NOC			=	\\033[0m$/;"	m
 NOEVENTMASK	includes/libft_define.h	/^# define NOEVENTMASK	/;"	d
 NOTIFY	includes/libft_define.h	/^# define NOTIFY	/;"	d
 N_KEY	includes/libft_define.h	/^# define N_KEY	/;"	d
@@ -98,6 +109,7 @@ OBJS	Makefile	/^OBJS 	=	$(SRCS:.c=.o)$/;"	m
 OBJS	Makefile	/^OBJS = $(addprefix $(OBJDIR), $(addsuffix .o, $(basename $(SRC))))$/;"	m
 OBJS_DIRS	Makefile	/^OBJS_DIRS = $(sort $(dir $(OBJS)))$/;"	m
 OK	includes/libft_define.h	/^# define OK	/;"	d
+OKC	Makefile	/^OKC			=	\\033[32m$/;"	m
 ONE	includes/libft_define.h	/^# define ONE	/;"	d
 OWNERGRABBUTTONMASK	includes/libft_define.h	/^# define OWNERGRABBUTTONMASK	/;"	d
 O_KEY	includes/libft_define.h	/^# define O_KEY	/;"	d
@@ -139,6 +151,7 @@ UP	includes/libft_define.h	/^# define UP	/;"	d
 U_KEY	includes/libft_define.h	/^# define U_KEY	/;"	d
 VISIBILITYCHANGEMASK	includes/libft_define.h	/^# define VISIBILITYCHANGEMASK	/;"	d
 V_KEY	includes/libft_define.h	/^# define V_KEY	/;"	d
+WAC	Makefile	/^WAC			=	\\033[33m$/;"	m
 WHEEL_DOWN	includes/libft_define.h	/^# define WHEEL_DOWN	/;"	d
 WHEEL_UP	includes/libft_define.h	/^# define WHEEL_UP	/;"	d
 W_KEY	includes/libft_define.h	/^# define W_KEY	/;"	d
@@ -285,7 +298,7 @@ ft_strlen	srcs/str/ft_strlen.c	/^size_t		ft_strlen(const char *str)$/;"	f
 ft_strmap	srcs/str/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f
 ft_strmapi	srcs/str/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
 ft_strncat	srcs/str/ft_strncat.c	/^char	*ft_strncat(char *dest, const char *src, size_t n)$/;"	f
-ft_strncmp	srcs/str/ft_strncmp.c	/^size_t		ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncmp	srcs/str/ft_strncmp.c	/^int			ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
 ft_strncpy	srcs/str/ft_strncpy.c	/^char	*ft_strncpy(char *dest, const char *src, size_t n)$/;"	f
 ft_strnequ	srcs/str/ft_strnequ.c	/^int		ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
 ft_strnew	srcs/str/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
