@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/19 21:01:20 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/06 13:56:12 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/10/25 11:25:38 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ size_t		ft_create_file(t_fd *fd, int chmod)
 	len = ft_strlen(tmp_num);
 	tmp = ft_strdup(tmp_num);
 	free(tmp_num);
-	tmp[len] = ' ';
-	tmp[len + 1] = '\0';
-	if (tmp == NULL && command == NULL)
+	tmp_num = ft_straddchar(tmp, ' ');
+	free(tmp);
+	if (tmp_num == NULL && command == NULL)
 		return (ERROR);
 	else
-		custom(command, tmp, file_path, 1);
+		custom(command, tmp_num, file_path, 1);
 	return (OK);
 }
