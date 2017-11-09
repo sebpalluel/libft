@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/24 18:07:42 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/09 19:15:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplitequ(char const *s, char *str);
 unsigned long	ft_stoul(const char *str, int base);
 long int		ft_strtol(const char *str, int base);
 int				ft_stroneof(char c, char *str);

@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/10/24 18:05:19 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/11/09 19:15:47 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -86,6 +86,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(STRPATH)ft_strjoin.c\
 			$(STRPATH)ft_strnjoin.c\
 			$(STRPATH)ft_strsplit.c\
+			$(STRPATH)ft_strsplitequ.c\
 			$(STRPATH)ft_strdel.c\
 			$(STRPATH)ft_strclr.c\
 			$(STRPATH)ft_strdup.c\

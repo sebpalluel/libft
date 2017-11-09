@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_srtsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strsplitequ.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/11 17:35:51 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/09 19:15:04 by psebasti         ###   ########.fr       */
+/*   Created: 2017/11/09 19:07:34 by psebasti          #+#    #+#             */
+/*   Updated: 2017/11/09 19:30:21 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int		ft_lines(char const *s, char c)
+static unsigned int		ft_lines(char const *s, char* str)
 {
-	unsigned int	lines;
-	unsigned int	i;
-	int				flag;
+	unsigned int		lines;
+	unsigned int		i;
+	int					flag;
 
 	lines = 0;
 	i = 0;
 	flag = 0;
 	while (s && s[i])
 	{
-		while (s[i] && s[i] == (char)c)
+		while (s[i] && ft_stroneof(s[i], str) == OK)
 			i++;
 		flag = 1;
-		while (s[i] && s[i] != (char)c)
+		while (s[i] && ft_stroneof(s[i], str) != OK)
 		{
 			if (flag)
 			{
@@ -39,12 +39,12 @@ static unsigned int		ft_lines(char const *s, char c)
 	return (lines);
 }
 
-static unsigned int		ft_letters(char const *s, char c, int i)
+static unsigned int		ft_letters(char const *s, char *str, int i)
 {
-	unsigned int	letters;
+	unsigned int		letters;
 
 	letters = 0;
-	while (s[i] != c && s[i])
+	while (s[i] && ft_stroneof(s[i], str) != OK)
 	{
 		letters++;
 		i++;
@@ -52,27 +52,27 @@ static unsigned int		ft_letters(char const *s, char c, int i)
 	return (letters);
 }
 
-char					**ft_strsplit(char const *s, char c)
+char					**ft_strsplitequ(char const *s, char *str)
 {
-	char			**tmp;
-	unsigned int	i;
-	unsigned int	lines;
-	unsigned int	letters;
+	char				**tmp;
+	unsigned int		i;
+	unsigned int		lines;
+	unsigned int		letters;
 
 	i = 0;
 	lines = 0;
-	if (!(tmp = (char**)malloc((ft_lines(s, c) + 1) * sizeof(char *))))
+	if (!(tmp = (char**)malloc((ft_lines(s, str) + 1) * sizeof(char *))))
 		return (NULL);
 	while (s && s[i])
 	{
-		while (s[i] == c && s[i])
+		while (s[i] && ft_stroneof(s[i], str) == OK)
 			i++;
 		if (s[i])
 		{
 			letters = 0;
-			if (!(tmp[lines] = malloc(sizeof(char) * ft_letters(s, c, i) + 1)))
+			if (!(tmp[lines] = malloc(sizeof(char) * ft_letters(s, str, i) + 1)))
 				return (NULL);
-			while (s[i] != c && s[i])
+			while (s[i] && ft_stroneof(s[i], str) != OK)
 				tmp[lines][letters++] = s[i++];
 			tmp[lines++][letters] = '\0';
 		}
