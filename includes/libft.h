@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/09 19:15:26 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/15 17:39:10 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@
 # include <fcntl.h>
 # include <limits.h>
 # include <time.h>
+# include <signal.h>
+# include <dirent.h>
+# include <sys/stat.h>
+# include <sys/wait.h>
 # include "../../minilibx/mlx.h"
 # include "libft_struct.h"
 # include "libft_define.h"
@@ -137,6 +141,7 @@ int				ft_strequ(char const *s1, char const *s2);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strjoinfree(char const *s1, char const *s2, size_t mode);
 char			*ft_strnjoin(char const *s1, char const *s2, size_t len);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
