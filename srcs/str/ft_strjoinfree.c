@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 17:37:57 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/15 17:41:36 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/15 19:49:23 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoinfree(char const *s1, char const *s2, size_t mode)
+char	*ft_strjoinfree(char *s1, char *s2, size_t mode)
 {
 	char	*tmp;
 

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 19:31:09 by psebasti          #+#    #+#             */
-/*   Updated: 2017/10/11 17:52:28 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/27 15:13:20 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef char		t_bool;
 
 typedef struct		s_str
 {
