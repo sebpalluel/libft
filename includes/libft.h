@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/30 15:12:35 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/11/30 15:28:46 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,8 +171,8 @@ void			*ft_memdup(const void *mem, size_t size);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdelif(t_list **alst, int (*cmp)(void *, size_t), \
-		void (*del)(void *, size_t))
+void			ft_lstdelif(t_list **alst, void *to_cmpr, \
+		int (*cmp)(void *, void *), void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstaddend(t_list **alst, t_list *new);
 void			ft_lstaddfront(t_list **alst, t_list *new);
