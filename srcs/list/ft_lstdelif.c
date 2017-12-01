@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 12:03:37 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/30 15:33:43 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/12/01 14:39:26 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,23 @@ static void	ft_lstdelif2(t_list **list, void *to_cmpr, \
 
 	lst_swap = NULL;
 	lst = *list;
-	while (lst->next && (*cmp)(lst->content, to_cmpr) == OK)
+	while (lst && lst->next && (*cmp)(lst->content, to_cmpr) != OK)
 		lst = lst->next;
-	if (lst->next->next)
+	if (lst && lst->next)
 	{
-		lst_swap = lst->next->next;
-		ft_lstdelone(&lst->next, del);
-		lst->next = lst_swap;
+		if (lst->next->next)
+		{
+			lst_swap = lst->next->next;
+			ft_lstdelone(&lst->next, del);
+			lst->next = lst_swap;
+		}
+		else
+		{
+			ft_lstdelone(&lst->next, del);
+			lst->next = NULL;
+		}
 	}
-	else
-	{
-		ft_lstdelone(&lst->next, del);
-		lst->next = NULL;
-	}
+	*list = lst;
 }
 
 void		ft_lstdelif(t_list **alst, void *to_cmpr, \
