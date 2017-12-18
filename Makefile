@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/11/30 15:12:57 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/12/18 19:27:27 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -145,6 +145,8 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(PERSOPATH)get_next_line.c\
 			$(PERSOPATH)ft_swap.c\
 			$(PERSOPATH)ft_perror.c\
+			$(PERSOPATH)match.c\
+			$(PERSOPATH)nmatch.c\
 			$(PRINTPATH)ft_printfloatmatrix.c\
 			$(PRINTPATH)ft_printintarray.c\
 			$(PRINTPATH)ft_printsize_tarray.c\
