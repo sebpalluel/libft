@@ -6,13 +6,13 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 19:07:34 by psebasti          #+#    #+#             */
-/*   Updated: 2017/11/09 19:30:21 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/12/19 13:14:46 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static unsigned int		ft_lines(char const *s, char* str)
+static unsigned int		ft_lines(char const *s, char *str)
 {
 	unsigned int		lines;
 	unsigned int		i;
@@ -39,7 +39,7 @@ static unsigned int		ft_lines(char const *s, char* str)
 	return (lines);
 }
 
-static unsigned int		ft_letters(char const *s, char *str, int i)
+static unsigned int		ft_len(char const *s, char *str, int i)
 {
 	unsigned int		letters;
 
@@ -56,11 +56,10 @@ char					**ft_strsplitequ(char const *s, char *str)
 {
 	char				**tmp;
 	unsigned int		i;
-	unsigned int		lines;
-	unsigned int		letters;
+	unsigned int		xy[2];
 
 	i = 0;
-	lines = 0;
+	xy[1] = 0;
 	if (!(tmp = (char**)malloc((ft_lines(s, str) + 1) * sizeof(char *))))
 		return (NULL);
 	while (s && s[i])
@@ -69,14 +68,14 @@ char					**ft_strsplitequ(char const *s, char *str)
 			i++;
 		if (s[i])
 		{
-			letters = 0;
-			if (!(tmp[lines] = malloc(sizeof(char) * ft_letters(s, str, i) + 1)))
+			xy[0] = 0;
+			if (!(tmp[xy[1]] = malloc(sizeof(char) * ft_len(s, str, i) + 1)))
 				return (NULL);
 			while (s[i] && ft_stroneof(s[i], str) != OK)
-				tmp[lines][letters++] = s[i++];
-			tmp[lines++][letters] = '\0';
+				tmp[xy[1]][xy[0]++] = s[i++];
+			tmp[xy[1]++][xy[0]] = '\0';
 		}
 	}
-	tmp[lines] = NULL;
+	tmp[xy[1]] = NULL;
 	return (tmp);
 }
