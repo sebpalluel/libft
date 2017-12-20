@@ -6,7 +6,7 @@
 #*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        *#
 #*                                                +#+#+#+#+#+   +#+           *#
 #*   Created: 2016/11/10 23:29:24 by psebasti          #+#    #+#             *#
-#*   Updated: 2017/12/18 19:27:27 by psebasti         ###   ########.fr       *#
+#*   Updated: 2017/12/20 15:48:49 by psebasti         ###   ########.fr       *#
 #*                                                                            *#
 #* ************************************************************************** *#
 
@@ -110,6 +110,7 @@ SRC		=	$(MEMPATH)ft_memset.c\
 			$(CTYPEPATH)ft_checkhexa.c\
 			$(CTYPEPATH)ft_checkdigit.c\
 			$(CTYPEPATH)ft_checkint.c\
+			$(CTYPEPATH)ft_checkalnum.c\
 			$(PUTPATH)ft_putchar.c\
 			$(PUTPATH)ft_putchar_fd.c\
 			$(PUTPATH)ft_putstr.c\

@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/12/18 19:27:55 by psebasti         ###   ########.fr       */
+/*   Updated: 2017/12/20 15:48:28 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int				ft_ishexa(int c);
 int				ft_checkint(char *str);
 int				ft_checkdigit(char *str);
 int				ft_checkhexa(char *str);
+int				ft_checkalnum(char *str);
 
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
