@@ -6,7 +6,7 @@
 /*   By: psebasti <sebpalluel@free.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/11 15:50:29 by psebasti          #+#    #+#             */
-/*   Updated: 2017/12/20 15:48:28 by psebasti         ###   ########.fr       */
+/*   Updated: 2018/01/11 18:37:05 by psebasti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,8 @@ void			ft_v_flip(void **array, size_t columns, size_t rows,\
 int				**ft_tabintcpy(int **array, size_t width);
 char			**ft_tabstrcpy(char **str);
 void			ft_tabfree(void **tab);
+void			ft_tabnullfree(void ***tab);
+char			*ft_tabtostr(char **tab);
 size_t			**ft_tabnewsize_t(size_t width, size_t height);
 int				**ft_tabnewint(size_t width, size_t height);
 char			**ft_tabnewstr(size_t width, size_t height);
